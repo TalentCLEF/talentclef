@@ -1,0 +1,5 @@
+/website/public
+/websiteresources/
+/websitenode_modules/
+/websitepackage-lock.json
+/website.hugo_build.lock
