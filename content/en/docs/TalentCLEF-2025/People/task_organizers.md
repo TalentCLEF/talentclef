@@ -8,6 +8,31 @@ weight: 1
 tags: [test, sample, docs]
 ---
 
+{{< card header="**Imagine**" title="Artist and songwriter: John Lennon" subtitle="Co-writer: Yoko Ono"
+          footer="![SignatureJohnLennon](https://server.tld/…/signature.png 'Signature John Lennon')">}}
+Imagine there's no heaven, It's easy if you try<br/>
+No hell below us, above us only sky<br/>
+Imagine all the people living for toda
+{{< /card >}}
+
+
+{{< cardpane >}}
+
+{{< card header="Card 1" title="Card Title 1" >}}
+This is some content for card 1. You can place any markdown or HTML here.
+{{< /card >}}
+
+{{< card header="Card 2" title="Card Title 2" >}}
+This is some content for card 2. You can also add images, links, or any other content.
+{{< /card >}}
+
+{{< card header="Card 3" title="Card Title 3" >}}
+This is some content for card 3.
+{{< /card >}}
+
+{{< /cardpane >}}
+
+
 {{% pageinfo %}}
 This is a placeholder page. Replace it with your own content.
 {{% /pageinfo %}}
