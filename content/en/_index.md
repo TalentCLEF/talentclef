@@ -16,19 +16,20 @@ title: TalentCLEF
 </style>
 
 {{< blocks/cover image_anchor="top" height="full" >}}
-  <div class="full-width-overlay">
-    <p class="display-1"><strong>Talent</strong>CLEF</p>
-    <p class="display-5"><i>Skill and Job Title Intelligence for Human Capital Management</i></p>
-  </div>
+
+<div class="full-width-overlay">
+  <p class="display-1"><strong>Talent</strong>CLEF</p>
+  <p class="display-5"><i>Skill and Job Title Intelligence for Human Capital Management</i></p>
+</div>
+
 <div class="text-center my-5">
-
-
-<a class="btn btn-lg custom-btn-dark me-3 mb-4" href='{{< relref "about" >}}'>
-  About TalentCLEF <i class="fas fa-info-circle ms-2"></i>
-</a>
-<a class="btn btn-lg custom-btn-yellow me-3 mb-4" href='{{< relref "docs" >}}'>
-  Info. about the 2025 Task <i class="fas fa-trophy ms-2"></i>
-</a>
+  <a class="btn btn-lg custom-btn-dark me-3 mb-4" href='{{< relref "about" >}}'>
+    About TalentCLEF <i class="fas fa-info-circle ms-2"></i>
+  </a>
+  <a class="btn btn-lg custom-btn-yellow me-3 mb-4" href='{{< relref "docs" >}}'>
+    Info. about the 2025 Task <i class="fas fa-trophy ms-2"></i>
+  </a>
+</div>
 
 
 
