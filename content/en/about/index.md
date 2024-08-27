@@ -67,7 +67,7 @@ Drive innovation in Human Capital Management by encouraging competitive environm
 Join our shared-task to push the boundaries of HR and NLP technology!
 {.text-center .display-5}
 <div class="text-center my-5">
-  <a class="btn btn-lg custom-btn-yellow me-3 mb-4" href="/docs/">
+  <a class="btn btn-lg custom-btn-yellow me-3 mb-4" href='{{< relref "docs" >}}'>
     Info. about the TalentCLEF Task <i class="fas fa-trophy ms-2"></i>
   </a>
 </div>
