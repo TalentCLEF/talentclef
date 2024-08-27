@@ -35,7 +35,7 @@ jobs:
           cache-dependency-path: 'website/package-lock.json'
 
       - run: npm ci
-          working-directory: website
+        working-directory: website
 
       - name: Build Hugo site
         run: hugo --baseURL https://${REPO_OWNER}.github.io/${REPO_NAME} --minify
