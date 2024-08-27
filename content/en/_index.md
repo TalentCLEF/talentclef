@@ -23,10 +23,10 @@ title: TalentCLEF
 <div class="text-center my-5">
 
 
-<a class="btn btn-lg custom-btn-dark me-3 mb-4" href="{{'/about/'|relURL}}">
+<a class="btn btn-lg custom-btn-dark me-3 mb-4" href="{{ "about/'" | relURL }}">
   About TalentCLEF <i class="fas fa-info-circle ms-2"></i>
 </a>
-<a class="btn btn-lg custom-btn-yellow me-3 mb-4" href="{{'/docs/'|relURL}}"> 
+<a class="btn btn-lg custom-btn-yellow me-3 mb-4" href="{{ "docs/'" | relURL }}">
   Info. about the 2025 Task <i class="fas fa-trophy ms-2"></i>
 </a>
 
