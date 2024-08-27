@@ -35,7 +35,12 @@ jobs:
           cache-dependency-path: 'website/package-lock.json'
 
       - run: npm ci
-      - run: hugo --baseURL https://${REPO_OWNER}.github.io/${REPO_NAME} --minify --source=website
+          working-directory: website
+
+      - name: Build Hugo site
+        run: hugo --baseURL https://${REPO_OWNER}.github.io/${REPO_NAME} --minify
+        working-directory: website  # Ejecutar Hugo dentro del directorio 'website'
+
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
