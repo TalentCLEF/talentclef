@@ -11,21 +11,29 @@ $secondary: #D5D8DC;
     display: none;
 }
 
-/* Custom styles to make the logo larger in the navbar */
-.td-navbar .navbar-brand__logo {
-    width: 400px;
-    /* Adjust this width as needed */
-    max-height: 150px;
-    /* Maintain aspect ratio */
+.td-navbar .navbar-brand__logo .navbar-logo {
+    width: auto;
+    /* Ajusta el ancho automáticamente */
+    max-width: 100%;
+    /* Limita el ancho máximo para que no exceda el contenedor */
+    overflow: hidden;
+    /* Evita que el contenido desborde */
 }
 
 .td-navbar .navbar-brand svg {
-    height: 80px !important; // Ajusta la altura del logo
-    max-height: 100px !important; // Establece un max-height para la responsividad
-    width: auto !important; // Mantén la relación de aspecto
-    margin: 0 50px !important; // Ajusta el margen si es necesario
+    height: 60px !important;
+    /* Ajusta la altura del logo */
+    max-height: 80px !important;
+    /* Establece un max-height para limitar el tamaño */
+    width: auto !important;
+    /* Mantén la relación de aspecto */
+    margin: 0 50px !important;
+    /* Ajusta el margen si es necesario */
+    display: block;
+    /* Asegura que el svg no desborde */
+    max-width: 100%;
+    /* No permite que el SVG crezca más allá del contenedor */
 }
-
 
 .custom-btn-yellow {
     background-color: #d6a100 !important;

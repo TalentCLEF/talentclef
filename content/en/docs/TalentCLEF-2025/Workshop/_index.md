@@ -2,34 +2,23 @@
 title: "Workshop"
 weight: 8
 type: docs
-description: >
-  A special section with a docs layout.  
+resources:
+  - src: "madrid_background.png"  
 ---
+<style>
+.full-width-image {
+            width: 80%;
+            height: auto; /* Maintains the aspect ratio */
+        }
+</style>
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+TalentCLEF 2025 workshop will be held as part of the CLEF 2025 conference (Conference and Labs of the Evaluation Forum), scheduled for September in Madrid, Spain.
 
-Information in this section helps your user try your project themselves.
+<img src="madrid_background.png" alt="Madrid Gran Via" class="full-width-image">
 
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
 
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+CLEF focuses on evaluating the effectiveness of information retrieval systems, such as search engines, text and multimedia retrieval systems, and other types of digital information systems. 
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+Participants in the TalentCLEF workshop are required to submit a short paper detailing the systems they have developed for the task. Accepted submissions will be published in the CLEF 2025 CEUR proceedings.
 
-## Prerequisites
-
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
-
-## Installation
-
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
-
-## Setup
-
-Is there any initial setup users need to do after installation to try your project?
-
-## Try it out!
-
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+At least one author from each accepted paper must register for the CLEF conference and present their system in a poster format. Additionally, outstanding participants, selected by the program committee, will have the opportunity to deliver an oral presentation of their work.
