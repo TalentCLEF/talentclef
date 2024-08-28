@@ -12,7 +12,9 @@ resources:
         }
 </style>
 
-TalentCLEF 2025 workshop will be held as part of the CLEF 2025 conference (Conference and Labs of the Evaluation Forum), scheduled for September in Madrid, Spain.
+## TalentCLEF Workshop @ CLEF 2025
+
+TalentCLEF 2025 workshop will be held as part of the CLEF 2025 conference (Conference and Labs of the Evaluation Forum), scheduled for September in Madrid, Spain. The TalentCLEF evaluation Lab will be a one-day event that will include several activities. There will be oral presentations of the best challenge solutions, keynote talks, a poster session for participants and a panel discussion. In order to boost participation, an awards ceremony will be held where diplomas will be awarded to the best performing teams. Below is a tentative schedule of the workshop activities.
 
 <img src="madrid_background.png" alt="Madrid Gran Via" class="full-width-image">
 

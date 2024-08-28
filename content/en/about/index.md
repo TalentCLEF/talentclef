@@ -48,7 +48,7 @@ Define frameworks for evaluating NLP models in the HR sector.
 {{% /blocks/feature %}}
 
 
-{{% blocks/feature icon="fa-people-group" title="Community" %}}
+{{% blocks/feature icon="fa-people-group" title="Community collaboration" %}}
 Foster a collaborative space for sharing insights and advancing technologies.
 {{% /blocks/feature %}}
 

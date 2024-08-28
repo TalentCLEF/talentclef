@@ -3,33 +3,28 @@ title: "Schedule"
 weight: 3
 type: docs
 description: >
-  A special section with a docs layout.  
+    Schedule and task deadlines
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
+{{< alert color="warning" title="Info." >}}
+<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2025 will be released on 15th October 2024
+ {{< /alert >}}
 
-Information in this section helps your user try your project themselves.
 
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
 
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
+| Status | Date                            | Event                                                       | Link |
+|--------|---------------------------------|-------------------------------------------------------------|------|
+|<div style="text-align: center; color: green;">&#10004;</div> | 9th September 2024 | Website release |  |
+|        | 15th October 2024               | Sample set  release                                    |  |
+|        | 13th November 2024              | Registration opens                                           |  |
+|        | 20th January 2025               | Training data available for Tasks A and B                    |  |
+|        | 17th February 2025              | Start of Task A with the release of the development data     |  |
+|        | 17th March 2025                 | Start of Task B with the release of the development data     |  | 
+|        | 21st April 2025                     | Test set release    |  | 
+|        | 21st April - 5th May 2025       | Evaluation period of Task A and B                            |  | 
+|        | 7th May 2025                    | Publication of Official Results                              |  | 
+|        | 15th June 2025                  | Submission of CLEF 2025 Working Notes (Tentative)             |  | 
+|        | 30th June - 7th July 2025       | Review of Labs Overviews (Tentative)                         |   | 
 
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
+{.td-table  .my-dark-table-style}
 
-## Prerequisites
-
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
-
-## Installation
-
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
-
-## Setup
-
-Is there any initial setup users need to do after installation to try your project?
-
-## Try it out!
-
-Can your users test their installation, for example by running a command or deploying a Hello World example?
