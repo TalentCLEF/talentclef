@@ -2,9 +2,6 @@
 title: "Motivation"
 weight: 1
 type: docs
-description: >
-  Task Motivation
-
 resources:
   - src: "talentclef_2025_schema.png"  
 ---
@@ -30,3 +27,10 @@ Despite all these benefits, the development and implementation of these systems 
 
 - **Cross-Industry Adaptability**:  The effectiveness of language-based systems can vary significantly across different industries due to their unique requirements, terminologies, and operational environments. For instance, the skills and competencies valued in the healthcare sector differ vastly from those in the tech or manufacturing sectors. Adapting these systems to function seamlessly across various industries requires developing tailored algorithms that can understand and prioritize specific industry needs. This involves not only technical adjustments but also deep domain knowledge, making cross-industry adaptability a complex and ongoing challenge. Without this adaptability, the utility of language-based technologies can be limited, reducing their effectiveness and potentially leading to inaccurate or irrelevant outcomes.
 
+
+
+The first edition of TalentCLEF aims to develop and evaluate models designed to facilitate three essential tasks: 
+
+1. Finding/ranking candidates for job positions based on their experience and professional skills.
+2. Implementing upskilling and reskilling strategies that promote the coninuous development of workers
+3. Detecting emerging skills and skills gaps of importance in organizations. 
