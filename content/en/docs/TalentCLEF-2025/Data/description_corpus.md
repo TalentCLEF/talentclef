@@ -1,8 +1,6 @@
 ---
 title: Description of the Corpus
 date: 2017-01-01
-description: >
-  A short lead description about this content page. It can be **bold** or _italic_ and can be split over multiple paragraphs.
 categories: [Examples]
 weight: 1
 tags: [test, sample, docs]

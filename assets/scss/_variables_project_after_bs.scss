@@ -1,9 +1,11 @@
 $custom-colors: (
     'secondary-color': #D5D8DC,
     'third-color': #b2bac4,
+    'fourth-color': #e9ebec,
     'primary-color': #2E4053,
     'dark-green': #335033,
-    'yellow-dark': #d6a100
+    'yellow-dark': #d6a100,
+    'white-color': #ffffff
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

@@ -118,7 +118,7 @@ github_project_repo = "https://github.com/google/docsy"
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "d72aa9b2712488cc3"
+gcs_engine_id = "625b2e7e7b59145fe"
 
 # Enable Lunr.js offline search
 offlineSearch = false
@@ -184,9 +184,9 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/google/docsy"
+  url = "https://github.com/TalentCLEF"
   icon = "fab fa-github"
-  desc = "Development takes place here!"
+  desc = "Official repos. related to TalentCLEF"
 #[[params.links.developer]]
 #  name = "Slack"
 #  url = "https://example.org/slack"
