@@ -49,7 +49,7 @@ exclude_search: true
 {{% blocks/lead %}}
 # What is **Talent**CLEF?
 <div style="text-align: center; font-size: 1.3em; padding-bottom: 20px">
-<strong>Talent</strong>CLEF is an initiative to advance Natural Language Processing (NLP) in Human Capital Management (HCM). It aims to create a public benchmark for model evaluation and promote collaboration to develop fair, multilingual, and flexible systems that improve HR practices across different industries.
+<strong>Talent</strong>CLEF is an initiative to advance Natural Language Processing (NLP) in Human Capital Management (HCM). It aims to create a public benchmark for model evaluation and promote collaboration to develop fair, multilingual, and flexible systems that improve Human Resources (HR) practices across different industries.
 <br></br>
 Join us in this innovative journey to shape the future of HR technology.
 </div>
@@ -68,12 +68,12 @@ Developing systems that can accurately handle multiple languages to manage globa
 
 
 {{% blocks/feature icon="fa-industry" title="Cross-Industry Adaptability" %}}
-Ensuring models do not introduce biases and promote equity and diversity in decision-making.
+Developing flexible Human Resources solutions tailored to the specific needs and standards of different industries.
 {{% /blocks/feature %}}
 
 
 {{% blocks/feature icon="fa-handshake-angle" title="Fair Models" %}}
-Developing flexible HR solutions tailored to the specific needs and standards of different industries.
+Ensuring models do not introduce biases and promote equity and diversity in decision-making.
 {{% /blocks/feature %}}
 
 
@@ -84,7 +84,7 @@ Developing flexible HR solutions tailored to the specific needs and standards of
 ## What are the goals of **Talent**CLEF?
 
 {{% blocks/feature icon="fa-gauge-high" title="Public Benchmark" %}}
-Define frameworks for evaluating NLP models in the HR field.
+Define frameworks for evaluating Natural Language Processing models in the Human Resources field.
 {{% /blocks/feature %}}
 
 

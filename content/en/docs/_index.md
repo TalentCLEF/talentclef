@@ -6,9 +6,8 @@ menu:
     weight: 20
 ---
 
-{{% pageinfo  color="warning"%}}
-<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2025 will be released on 15th October 2024
-{{% /pageinfo %}}
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2025 will be released on 15th October 2024
+{{< /alert >}}
 
 
 ### Current task schedule
