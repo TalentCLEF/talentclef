@@ -49,7 +49,9 @@ exclude_search: true
 {{% blocks/lead %}}
 # What is **Talent**CLEF?
 <div style="text-align: center; font-size: 1.3em; padding-bottom: 20px">
-<strong>Talent</strong>CLEF is an initiative focused on advancing the application of Natural Language Processing (NLP) technologies in Human Capital Management (HCM). By establishing a public benchmark for model evaluation and fostering a collaborative environment, TalentCLEF seeks to create fair, multilingual, and adaptable systems that enhance HR practices across industries. Join us in this innovative journey to shape the future of HR technology.
+<strong>Talent</strong>CLEF is an initiative to advance Natural Language Processing (NLP) in Human Capital Management (HCM). It aims to create a public benchmark for model evaluation and promote collaboration to develop fair, multilingual, and flexible systems that improve HR practices across different industries.
+<br></br>
+Join us in this innovative journey to shape the future of HR technology.
 </div>
 
 
@@ -57,7 +59,7 @@ exclude_search: true
 
 {{% blocks/section color="third-color" type="row" %}}
 
-## What challenges **Talent**CLEF address?
+## What challenges does **Talent**CLEF address?
 
 
 {{% blocks/feature icon="fa-language" title="Multilingualism" %}}
@@ -71,7 +73,7 @@ Ensuring models do not introduce biases and promote equity and diversity in deci
 
 
 {{% blocks/feature icon="fa-handshake-angle" title="Fair Models" %}}
-Creating adaptable systems that meet the unique Human Resources needs and standards of various industries.
+Developing flexible HR solutions tailored to the specific needs and standards of different industries.
 {{% /blocks/feature %}}
 
 
@@ -79,20 +81,20 @@ Creating adaptable systems that meet the unique Human Resources needs and standa
 
 
 {{% blocks/section color="secondary-color" type="row" %}}
-## What are the **Talent**CLEF goals?
+## What are the goals of **Talent**CLEF?
 
 {{% blocks/feature icon="fa-gauge-high" title="Public Benchmark" %}}
-Define frameworks for evaluating NLP models in the HR sector.
+Define frameworks for evaluating NLP models in the HR field.
 {{% /blocks/feature %}}
 
 
 {{% blocks/feature icon="fa-people-group" title="Community collaboration" %}}
-Foster a collaborative space for sharing insights and advancing technologies.
+Foster a collaborative space to share insights and advance technology.
 {{% /blocks/feature %}}
 
 
 {{% blocks/feature icon="fa-chart-line" title="Advance the State-of-the-Art" %}}
-Drive innovation in Human Capital Management by encouraging competitive environments.
+Drive innovation in Human Capital Management by providing a competitive environment for the development and evaluation of AI models.
 {{% /blocks/feature %}}
 
 
