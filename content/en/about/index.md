@@ -128,12 +128,12 @@ TalentCLEF is organized by:
 <div class="container2">
         <div class="colcolumn2umn">
             <a href="https://www.avature.net/">
-              <img src="images/Avature_logo.png" alt="Avature Logo" id="imagecol_avature">
+              <img src="images/Avature.png" alt="Avature Logo" id="imagecol_avature">
             </a>
         </div>
         <div class="column2">
             <a href="https://www.uned.es/">
-              <img src="images/uned_logo.png" alt="UNED Logo" id="imagecol_uned">
+              <img src="images/uned.png" alt="UNED Logo" id="imagecol_uned">
             </a>
         </div>
 </div>
