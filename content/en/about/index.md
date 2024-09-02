@@ -10,6 +10,7 @@ exclude_search: true
             justify-content: center;
             align-items: center;
             margin-top: 50px;
+            flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas cuando no caben en una sola */
         }
 
         .column2 {
@@ -17,14 +18,21 @@ exclude_search: true
             margin: 0 20px;
         }
 
-        .column2 img {
+        
+        #imagecol_avature {
             width: 100%;
             max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
             height: auto;
             display: block;
             margin: 0 auto;
         }
-
+        #imagecol_uned {
+            width: 100%;
+            max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         .column2 .text-bold {
             font-weight: bold;
             margin-top: 10px;
@@ -120,12 +128,12 @@ TalentCLEF is organized by:
 <div class="container2">
         <div class="colcolumn2umn">
             <a href="https://www.avature.net/">
-              <img src="images/Avature_logo.png" alt="Avature Logo" style="width: 200%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+              <img src="images/Avature_logo.png" alt="Avature Logo" id="imagecol_avature">
             </a>
         </div>
         <div class="column2">
             <a href="https://www.uned.es/">
-              <img src="images/uned_logo.png" alt="UNED Logo" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+              <img src="images/uned_logo.png" alt="UNED Logo" id="imagecol_uned">
             </a>
         </div>
 </div>
