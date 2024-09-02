@@ -1,5 +1,6 @@
 ---
 title: TalentCLEF
+exclude_search: true
 ---
 <style>
 .full-width-overlay {

@@ -2,6 +2,7 @@
 title: TalentCLEF
 linkTitle: About TalentCLEF
 menu: {main: {weight: 10}}
+exclude_search: true
 ---
 <style>
         .container2 {

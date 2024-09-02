@@ -118,10 +118,12 @@ github_project_repo = "https://github.com/google/docsy"
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "625b2e7e7b59145fe"
+# gcs_engine_id = "625b2e7e7b59145fe"
 
 # Enable Lunr.js offline search
-offlineSearch = false
+offlineSearch = true
+offlineSearchSummaryLength = 50
+offlineSearchMaxResults = 5
 
 # Enable syntax highlighting and copy buttons on code blocks with Prism
 prism_syntax_highlighting = false
@@ -150,6 +152,7 @@ sidebar_search_disable = false
 
 # Adds a H2 section titled "Feedback" to the bottom of each doc. The responses are sent to Google Analytics as events.
 # This feature depends on [services.googleAnalytics] and will be disabled if "services.googleAnalytics.id" is not set.
+services.googleAnalytics.id = "G-ZT248J0S5L"
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
