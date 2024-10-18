@@ -15,7 +15,7 @@ description: >
 | Status | Date                            | Event                                                       | Link |
 |--------|---------------------------------|-------------------------------------------------------------|------|
 |<div style="text-align: center; color: green;">&#10004;</div> | 9th September 2024 | Website release |  |
-|        | 15th October 2024               | Sample set  release                                    |  |
+|        | 25th October 2024               | Sample set  release                                    |  |
 |        | 13th November 2024              | Registration opens                                           |  |
 |        | 20th January 2025               | Training data available for Tasks A and B                    |  |
 |        | 17th February 2025              | Start of Task A with the release of the development data     |  |
