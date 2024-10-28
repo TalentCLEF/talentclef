@@ -18,7 +18,7 @@ We look forward to further promoting the task to interested participants through
 We will be publishing the sample set soon.
 
 
-{{% imgproc talentclef_presentation<> Fit "1200x400"%}}
+{{% imgproc talentclef_presentation Fit "1200x400"%}}
 TalentCLEF presention @ CLEF2024
 {{% /imgproc %}}
 
