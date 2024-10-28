@@ -6,7 +6,7 @@ menu:
     weight: 20
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2025 will be released on 15th October 2024
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2025has already been published in [Zenodo](https://doi.org/10.5281/zenodo.14002665)
 {{< /alert >}}
 
 
@@ -15,7 +15,7 @@ menu:
 | Status | Date                            | Event                                                       | Link |
 |--------|---------------------------------|-------------------------------------------------------------|------|
 |<div style="text-align: center; color: green;">&#10004;</div> | 9th September 2024 | Website release |  |
-|        | 25th October 2024               | Sample set  release                                    |  |
+|        | 25th October 2024               | Sample set  release                                    | [Link](https://doi.org/10.5281/zenodo.14002665) |
 |        | 13th November 2024              | Registration opens                                           |  |
 |        | 20th January 2025               | Training data available for Tasks A and B                    |  |
 |        | 17th February 2025              | Start of Task A with the release of the development data     |  |

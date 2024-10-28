@@ -29,6 +29,12 @@ resources:
           footer="**Laura García-Sardiña** <br> Avature, Spain">}}
           <img src="laura_garcia.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
+
+{{< card header="" title="" subtitle=""
+          footer="**Daniel Deniz Cerpa** <br> Avature, Spain">}}
+          <img src="daniel_deniz.jpg" alt="Madrid Gran Via" class="full-width-image">
+{{< /card >}}
+
 {{< card header="" title="" subtitle=""
           footer="**Alvaro Rodrigo, PhD.** <br> UNED, Spain">}}
           <img src="alvaro_rodrigo.png" alt="Madrid Gran Via" class="full-width-image">
