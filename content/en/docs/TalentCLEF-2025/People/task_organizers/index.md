@@ -31,7 +31,7 @@ resources:
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
-          footer="**Daniel Deniz Cerpa** <br> Avature, Spain">}}
+          footer="**Daniel Deniz Cerpa, PhD.** <br> Avature, Spain">}}
           <img src="daniel_deniz.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 

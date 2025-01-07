@@ -15,6 +15,7 @@ tags: [test, sample, docs]
 - Jens-Joris Decorte - Lead AI Scientist at TechWolf
 - David Graus - Lead Data Scientist at Randstad Group
 - Mesutt Kayaa - Postdoctoral Researcher at Jobindex A/S and IT University Copenhagen
+- Jan Luts - Senior Data Scientist at NTT Data & ESCO
 - Elena Montiel-Ponsoda - Professor at the Technical University of Madrid (UPM) - AI4Labour project
 - Javier Huertas Tato - Assistant Professor of the Technical University of Madrid (UPM)
 - Patricia Martín Chozas - Postdoctoral Researcher  at the Ontology Engineering Group (UPM)  - AI4Labour project
