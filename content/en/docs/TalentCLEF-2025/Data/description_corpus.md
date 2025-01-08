@@ -140,8 +140,6 @@ As with Task A, the training data uses public terminologies to represent a broad
 
 For generating the training data for Task B, the information available in ESCO has been used.  We have prepared the training data in three separate files: `job2skill.tsv`, `jobid2terms.json` and `skillid2terms.json`.
 
-Para la generación de datos de entrenamiento para la Task B se ha utilizado la información presente en ESCO. El traininn data se provee en 3 diferent files: `job2skill.tsv`, `jobid2terms.json` y `skillid2terms.json`.
-
 - `job2skill.tsv`: This file has been curated to include the most representative skills for each job title in ESCO. A filtering process has been applied to the number of skills per job title to avoid outliers. This file contains three columns:
     - *job_id*: ESCO identifier for the job position.
     - *skill_id*: ESCO identifier for the skill.
