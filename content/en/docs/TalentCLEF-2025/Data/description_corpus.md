@@ -23,6 +23,7 @@ On the other hand, the validation and test corpora have been annotated by domain
 
 1. **Training Set**: 
 The training data is provided in a tabular format with three columns:
+    - *family_id*: The ISCO family id representing the group to which the job identifier belongs.
     - *id*: An ESCO identifier indicating the origin of the pair's job titles.
     - *jobtitle_1*: The first job title in the pair.
     - *jobtitle_2*: A second job title related to *jobtitle_1*.
@@ -35,11 +36,11 @@ The training data is provided in a tabular format with three columns:
     An example of the content of these files is shown below:
 
     
-    | id                                                                                             | jobtitle_1               | jobtitle_2                  |
-    |------------------------------------------------------------------------------------------------|---------------------------|-----------------------------|
-    | http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1                    | desarrollador de software | desarrolladora de soluciones |
-    | http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1                    | desarrollador de software | ingeniera de aplicaciones   |
-    | http://data.europa.eu/esco/occupation/d0aa0792-4345-474b-9365-686cf4869d2e                    | diseñador de software     | ingeniero de software       |
+  | family_id                                         | id                                                                                             | jobtitle_1               | jobtitle_2                  |
+|---------------------------------------------------|------------------------------------------------------------------------------------------------|---------------------------|-----------------------------|
+| http://data.europa.eu/esco/isco/C2512            | http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1                    | desarrollador de software | desarrolladora de soluciones |
+| http://data.europa.eu/esco/isco/C2512            | http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1                    | desarrollador de software | ingeniera de aplicaciones   |
+| http://data.europa.eu/esco/isco/C2512            | http://data.europa.eu/esco/occupation/d0aa0792-4345-474b-9365-686cf4869d2e                    | diseñador de software     | ingeniero de software       |
 
 
 2. **Validation Set**:
@@ -136,20 +137,56 @@ As with Task A, the training data uses public terminologies to represent a broad
 
 <strong>Data:</strong>
 1. **Training Set**: 
-The training data is provided in a tabular format with five columns:
-    - *job_id*: An ESCO identifier indicating the job titles.
-    - *jobtitle*: Job title in the pair.
-    - *skill_id*: An ESCO identifier indicating the skill.
-    - *skill*: Skill name.
-    - *required_skill*: Indicates if the skill is essential for the job. A value of True denotes an essential skill, while False marks it as optional.
+
+For generating the training data for Task B, the information available in ESCO has been used.  We have prepared the training data in three separate files: `job2skill.tsv`, `jobid2terms.json` and `skillid2terms.json`.
+
+Para la generación de datos de entrenamiento para la Task B se ha utilizado la información presente en ESCO. El traininn data se provee en 3 diferent files: `job2skill.tsv`, `jobid2terms.json` y `skillid2terms.json`.
+
+- `job2skill.tsv`: This file has been curated to include the most representative skills for each job title in ESCO. A filtering process has been applied to the number of skills per job title to avoid outliers. This file contains three columns:
+    - *job_id*: ESCO identifier for the job position.
+    - *skill_id*: ESCO identifier for the skill.
+    - *rel_type*:Indicator specifying whether the *skill_id* is essential or optional for a specific *job_id*. It can have the value "essential" or "optional."
+
+
 
     An example of the content of this file is shown below:
 
-    | job_id                                                                 | jobtitle           | skill_id                                                              | skill               | required_skill |
-    |------------------------------------------------------------------------|--------------------|-----------------------------------------------------------------------|---------------------|----------------|
-    | [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | software engineer  | [http://data.europa.eu/esco/skill/8b94aa1e-89c9-459d-b3b4-1dfab8dec2df](http://data.europa.eu/esco/skill/8b94aa1e-89c9-459d-b3b4-1dfab8dec2df) | use software libraries | True           |
-    | [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | software engineer  | [http://data.europa.eu/esco/skill/f84a433f-34f1-4083-b0a3-24802623509c](http://data.europa.eu/esco/skill/f84a433f-34f1-4083-b0a3-24802623509c) | web services         | True           |
-    | [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | software engineer  | [http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e](http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e) | design user interface | False          |
+    | job_id                                                                 | skill_id                                                              | rel_type    |
+|------------------------------------------------------------------------|-----------------------------------------------------------------------|-------------|
+| [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | [http://data.europa.eu/esco/skill/8b94aa1e-89c9-459d-b3b4-1dfab8dec2df](http://data.europa.eu/esco/skill/8b94aa1e-89c9-459d-b3b4-1dfab8dec2df) | essential   |
+| [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | [http://data.europa.eu/esco/skill/f84a433f-34f1-4083-b0a3-24802623509c](http://data.europa.eu/esco/skill/f84a433f-34f1-4083-b0a3-24802623509c) | essential   |
+| [http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1](http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1) | [http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e](http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e) | optional    |
+
+
+
+- `jobid2terms.json`: This JSON file contains *job_id* identifiers used in the training set for Task A as keys, and a list of valid lexical variants for each identifier as values.
+
+    ```json
+    {
+        "http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1": [
+            "application developer", "application programmer", "applications engineer",
+            "application software developer", "battery software developer",
+            "developer of software", "programmer", "soft developer",
+            "software developer", "software developers", "software engineer",
+            "software specialist", "solutions developer"
+        ]
+        ...
+    }
+    ```
+
+- `skillid2terms.json`: This JSON file contains *skill_id* identifiers as keys, and a list of valid lexical variants for each identifier as values.
+
+    ```json
+    {
+        "http://data.europa.eu/esco/skill/f84a433f-34f1-4083-b0a3-24802623509c": [
+            "web services", "web services systems"
+        ],
+        "http://data.europa.eu/esco/skill/fd33c66c-70c4-40e6-b87c-5495bd3bf26e": [
+            "design user interface"
+        ]
+    }
+    ```
+
 
 
 2. **Validation Set**:

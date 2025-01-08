@@ -152,7 +152,9 @@ The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and T
                         <li class="line">
                             <span class="folder">📁</span> training
                             <ul class="subfolder">
-                                <li><span class="file">📄</span> taskB_training.tsv</li>
+                                <li><span class="file">📄</span> job2skill.tsv</li>
+                                <li><span class="file">📄</span> jobid2terms.json</li>
+                                <li><span class="file">📄</span> skillid2terms.json</li>
                             </ul>
                         </li>
                         <!-- Task B / Validation -->
