@@ -30,15 +30,22 @@ resources:
           <img src="laura_garcia.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
+{{< card header="" title="" subtitle=""
+          footer="**Daniel Deniz Cerpa, PhD.** <br> Avature, Spain">}}
+          <img src="daniel_deniz.jpg" alt="Madrid Gran Via" class="full-width-image">
+{{< /card >}}
+
+
 {{< /cardpane >}}
 
 
 
 {{< cardpane >}}
 
+
 {{< card header="" title="" subtitle=""
-          footer="**Daniel Deniz Cerpa, PhD.** <br> Avature, Spain">}}
-          <img src="daniel_deniz.jpg" alt="Madrid Gran Via" class="full-width-image">
+          footer="**Paula Estrella** <br> Avature, Spain">}}
+          <img src="paula_estrella.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
