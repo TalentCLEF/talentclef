@@ -6,9 +6,8 @@ menu:
     weight: 20
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i>You can now register for <strong>Talent</strong>CLEF 2025 [here](https://clef2025-labs-registration.dei.unipd.it/)
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The training data for <strong>Talent</strong>CLEF 2025 tasks A and B is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665).
 {{< /alert >}}
-
 
 ### Current task schedule
 
@@ -17,7 +16,7 @@ menu:
 |<div style="text-align: center; color: green;">&#10004;</div> | 9th September 2024 | Website release |  |
 |<div style="text-align: center; color: green;">&#10004;</div> | 25th October 2024               | Sample set  release                                    | [Link](https://doi.org/10.5281/zenodo.14002665) |
 |<div style="text-align: center; color: green;">&#10004;</div> | 13th November 2024              | Registration opens                                           | [Link](https://clef2025-labs-registration.dei.unipd.it/) |
-|        | 20th January 2025               | Training data available for Tasks A and B                    |  |
+|<div style="text-align: center; color: green;">&#10004;</div> | 20th January 2025               | Training data available for Tasks A and B                    |  [Link](https://doi.org/10.5281/zenodo.14002665) |
 |        | 17th February 2025              | Start of Task A with the release of the development data     |  |
 |        | 17th March 2025                 | Start of Task B with the release of the development data     |  | 
 |        | 21st April 2025                     | Test set release    |  | 

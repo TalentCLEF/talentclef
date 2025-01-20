@@ -26,3 +26,14 @@ To support your participation in this shared task, we have compiled a list of ad
 - [NESTA Taxonomy](https://github.com/nestauk/skills-taxonomy-v2)
 - [ESCO Taxonomy](https://esco.ec.europa.eu/en/use-esco/download)
 
+## 3. Tutorials: 
+
+We will publish a series of notebooks covering the fundamentals, including how to work with the data and upload predictions to Codalab.
+
+| Notebook                                    | Colab                                                                                                   |
+|:--------------------------------------------|:-------------------------------------------------------------------------------------------------------|
+| Data Download and Load                      | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TalentCLEF/talentclef_tutorials/blob/main/talentclef2025/TalentCLEF_data_tutorial.ipynb)   |     
+
+
+
+
