@@ -53,8 +53,9 @@ The training data is provided in a tabular format with three columns:
         - *c_id*: A unique identifier for each corpus element.
         - *jobtitle*: The job title present in the corpus.
 
-    - *q_rels*: This file maps the relationship between the query and the corpus elements:
+    - *qrels*: This file defines the relationship between the query and the corpus elements. It does not include a column header, but one is shown here for illustrative purposes.
         - *q_id*: The identifier of the query.
+        - *iter*: A reserved field (always 0).
         - *c_id*: The identifier of the corresponding corpus element.
         - *relevance*: A binary score (0 or 1) indicating the relevance of the corpus element to the query, where 1 signifies relevant and 0 non-relevant.
 
@@ -94,16 +95,16 @@ The training data is provided in a tabular format with three columns:
     <div style="flex: 1;">
 
     #### q_rels
-    | q_id | c_id | relevance |
-    |------|------|-----------|
-    | 1    | 2    | 1         |
-    | 1    | 3    | 1         |
-    | 1    | 4    | 1         |
-    | 1    | 5    | 1         |
-    | 1    | 6    | 1         |
-    | 1    | 7    | 1         |
-    | 1    | 8    | 1         |
-    | 1    | 9    | 1         |
+    | q_id |iter | c_id | relevance |
+    |------|------|------|-----------|
+    | 1    | 0    | 2    | 1         |
+    | 1    | 0    | 3    | 1         |
+    | 1    | 0    | 4    | 1         |
+    | 1    | 0    | 5    | 1         |
+    | 1    | 0    | 6    | 1         |
+    | 1    | 0    | 7    | 1         |
+    | 1    | 0    | 8    | 1         |
+    | 1    | 0    | 9    | 1         |
 
     </div>
 

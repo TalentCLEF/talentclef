@@ -37,11 +37,32 @@ Links to TalentCLEF related resources:
     TalentCLEF task calendar
   </a>
 </div>
-
-
 {{< /card >}}
 
 {{< /cardpane>}}
+
+{{< cardpane>}}
+{{< card header="**TalentCLEF 2025 Corpora**">}}
+<div style="text-align:center">
+ <a href='https://doi.org/10.5281/zenodo.14002665' target="_blank">
+    <img src="zenodo.png" alt="GitHub Logo" style="width: 300px; height: auto;">
+    </br>
+    TalentCLEF 2025 Corpora
+  </a>
+</div>
+{{< /card >}}
+
+{{< card header="**TalentCLEF 2025 Evaluation Script**">}}
+<div style="text-align:center">
+ <a href='https://github.com/TalentCLEF/talentclef25_evaluation_script' target="_blank">
+    <img src="github.png" alt="GitHub Logo" style="width: 100px; height: auto;">
+    </br>
+    TalentCLEF 2025 Evaluation Script
+  </a>
+</div>
+{{< /card >}}
+{{< /cardpane>}}
+
 </div>
 
 {{% /blocks/section %}}

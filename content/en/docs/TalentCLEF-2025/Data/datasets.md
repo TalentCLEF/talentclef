@@ -110,7 +110,7 @@ The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and T
                                     <ul class="subfolder">
                                         <li><span class="file">📄</span> queries</li>
                                         <li><span class="file">📄</span> corpus_elements</li>
-                                        <li><span class="file">📄</span> q_rels</li>
+                                        <li><span class="file">📄</span> qrels.tsv</li>
                                     </ul>
                                 </li>
                                 <li class="line"><span class="folder">📁</span> spanish

@@ -29,7 +29,7 @@ The TalentCLEF 2025 task is structured into two independent sub-tasks, each taki
 
 - *Training Set*: A collection of 15,000 pairs of related job titles per language (English, Spanish, and German), each labeled with a concept identifier, will be provided to facilitate the creation of cross-language training samples. No training data will be provided in Chinese, opening the possibility to use different techniques to improve the performance of the models in this language.
 
-- *Development Set*: Participants will receive a manually annotated evaluation set of 100 samples per language, consisting of a job title and its list of related job titles. A knowledge base of 2,500 job titles in each task language will also be provided for participants to generate predictions by ranking it. Additionally, cross-lingual data will be also released to allow them assess the models' ability to operate in that scenario.
+- *Development Set*: Participants will receive a manually annotated evaluation set of 100 samples per language, consisting of a job title and its list of related job titles. A knowledge base of 2,500 job titles in each task language will also be provided for participants to generate predictions by ranking it. 
 
 - *Test set*: A background set comprising 5,000 job titles will be provided. The evaluation, however, will be conducted on a subset of the background set, that will be a gold standard corpus of 100 job titles in each language annotated with the same methodology as the development set. 
 
