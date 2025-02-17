@@ -20,8 +20,11 @@ description: >
 |        | 21st April 2025                     | Test set release    |  | 
 |        | 21st April - 5th May 2025       | Evaluation period of Task A and B                            |  | 
 |        | 7th May 2025                    | Publication of Official Results                              |  | 
-|        | 15th June 2025                  | Submission of CLEF 2025 Working Notes (Tentative)             |  | 
-|        | 30th June - 7th July 2025       | Review of Labs Overviews (Tentative)                         |   | 
+|        | 30th May 2025                 | Submission of CLEF 2025 Working Notes           |  | 
+|        | 30th May - 27th June      | Review of Working Notes                        |   | 
+|        | 27th June 2025    | Notification of Acceptance for Participant Papers       |   | 
+
+
 
 {.td-table  .my-dark-table-style}
 
