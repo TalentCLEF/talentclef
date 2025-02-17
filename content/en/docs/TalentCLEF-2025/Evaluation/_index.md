@@ -22,12 +22,12 @@ The evaluation will be done at CodaBench. TalentCLEF-2025 submissions will be ra
 Submissions must adhere to the TREC Run File Format, including column names, with exactly six space-separated columns per line, structured as follows:
 
 ```
-<query_id> Q0 <doc_id> <rank> <score> <run_tag>
+<q_id> Q0 <doc_id> <rank> <score> <run_tag>
 ```
 
 **Column Descriptions**
 
-- `<query_id>`: The identifier for the query corresponding to the job title being searched.
+- `<q_id>`: The identifier for the query corresponding to the job title being searched.
 - `Q0`: A constant placeholder (always set to "Q0").
 - `<doc_id>`: The identifier for the retrieved corpus element.
 - `<rank>`: The ranking position of the retrieved document for the query (starting at 1).
@@ -55,6 +55,6 @@ During the **development phase**, participants can submit as many files as they 
 
 The Codabench competition links will be shared soon, and participants will be notified both here and through online communication channels.
 
-For local testing, an evaluation script is available in our GitHub repository. You can access it here: [Evaluation Script](https://github.com/TalentCLEF/talentclef25_evaluation_script).
+For local testing, an evaluation script is available in our GitHub repository. You can access it here: [Evaluation Script](https://github.com/TalentCLEF/talentclef25_evaluation_script). You can find a tutorial on the process of generating submission files and evaluating them in the Tutorials section of the [*Additional resources page*](https://talentclef.github.io/talentclef/docs/talentclef-2025/data/additional_resources/#3-tutorials)
 
 
