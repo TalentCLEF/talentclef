@@ -45,10 +45,33 @@ Links to TalentCLEF related resources:
 {{< card header="**TalentCLEF 2025 Corpora**">}}
 <div style="text-align:center">
  <a href='https://doi.org/10.5281/zenodo.14002665' target="_blank">
-    <img src="zenodo.png" alt="GitHub Logo" style="width: 300px; height: auto;">
+    <img src="zenodo.png" alt="GitHub Logo" style="width: 150px; height: auto;">
     </br>
     TalentCLEF 2025 Corpora
   </a>
+</div>
+{{< /card >}}
+
+
+
+{{< /cardpane>}}
+</div>
+
+<div class="d-flex justify-content-center">
+{{< cardpane>}}
+{{< card header="**TalentCLEF Task A - Codabench**">}}
+<div style="text-align:center">
+  <a href="https://www.codabench.org/competitions/5842" target="_blank" >
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" style="width: 200px; height: auto;">
+    </br>
+    TalentCLEF 2025 Task A CodaBench
+  </a>
+  </div>
+{{< /card >}}
+
+{{< card header="**TalentCLEF Task B - Codabench**">}}
+<div style="text-align:center">
+ To Be Published
 </div>
 {{< /card >}}
 
@@ -61,7 +84,9 @@ Links to TalentCLEF related resources:
   </a>
 </div>
 {{< /card >}}
+
 {{< /cardpane>}}
+
 
 </div>
 
