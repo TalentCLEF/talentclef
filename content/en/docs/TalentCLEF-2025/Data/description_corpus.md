@@ -196,12 +196,60 @@ For generating the training data for Task B, the information available in ESCO h
 
     - *Corpus Elements*: Contains:
         - *c_id*: A unique identifier for each corpus element.
-        - *skill*: The skill included as a corpus element.
+        - *esco_uri*: The ESCO URIs associated to `c_id`.
+        - *skill_aliases*: The list aliases of the ESCO skill
 
     - *q_rels*: This file maps the relationship between the query and the corpus elements:
         - *q_id*: The identifier of the query.
+        - *iter*: A reserved field (always 0).
         - *c_id*: The identifier of the corresponding corpus element.
         - *relevance*: A binary score (0 or 1) indicating the relevance of the corpus element to the query, where 1 signifies relevant and 0 non-relevant.
+
+    Example of the content of these files:
+
+    <div style="display: flex; gap: 20px;">
+
+    <div style="flex: 1;">
+    
+    #### queries
+    | q_id | jobtitle    |
+    |------|-------------|
+    | dev_qb_jt_1    | corporate governance analyst |
+
+    </div>
+
+    <div style="flex: 1;">
+    
+    #### corpus_elements
+    | c_id | esco_uri                   | skill_aliases |
+    |------|-----------------------------|----------------------------|
+    dev_cb_sk_1	| http://data.europa.eu/esco/skill/1c460d2d-90c6-4fc9-ad49-febb6e15605a |	['pricing plans', 'price strategies', 'pricing tactics', 'pricing strategies', 'pricing strategy']
+dev_cb_sk_2	| http://data.europa.eu/esco/skill/301a6581-e983-4bb6-8b31-b3ee2cbc2392	| ['putting out fires', ..., 'fires putting out']
+dev_cb_sk_3	| http://data.europa.eu/esco/skill/a4881e54-6055-4e61-855a-0a56ced7cfa3 |	['online assessment', 'analysis of web strategy', 'web presence assessment', 'web strategy assessment']
+dev_cb_sk_4	| http://data.europa.eu/esco/skill/efda73b4-5212-40a7-b2f8-d2f754ffdf2b	| ['keeping up with trends', 'keep pace with trends', 'follow trends', ..., 'keep up with trends']
+dev_cb_sk_5	| http://data.europa.eu/esco/skill/22a173f5-868c-4d82-87e6-beed500ce070	| ['prepare tax returns form', ..., 'make tax returns forms ready', 'preparing tax returns forms']
+dev_cb_sk_6	| http://data.europa.eu/esco/skill/97b890ff-acd7-46ad-8d3a-4186f4d42bbf	| ['tuning procedures', ..., 'tuning skills', 'tuning techniques']
+dev_cb_sk_7	| http://data.europa.eu/esco/skill/d5c20065-1d1f-446b-8143-9d1e180c512b	| ['iconography methods', 'iconography']
+
+    </div>
+
+    <div style="flex: 1;">
+
+    #### q_rels
+    | q_id |iter | c_id | relevance |
+    |------|------|------|-----------|
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1034| 1         |
+    | dev_qb_jt_1    | 0    |dev_cb_sk_1087| 1         |
+    | dev_qb_jt_1    | 0    |dev_cb_sk_1088 | 1         |
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1099   | 1         |
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1104 | 1         |
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1107    | 1         |
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1110  | 1         |
+    | dev_qb_jt_1    | 0    | dev_cb_sk_1112 | 1         |
+
+    </div>
+
+    </div>
 
 3. **Test Set**:
     The test set consists of two files, `queries` and `corpus elements`. The participant should generate a *q_rels* file as prediction based on the queries and corpus elements provided. 
