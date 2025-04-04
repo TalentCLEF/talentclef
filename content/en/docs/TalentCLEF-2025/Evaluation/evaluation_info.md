@@ -33,7 +33,10 @@ The evaluation for TalentCLEF-2025 will be conducted on **Codabench**. Submissio
 
 {{< card header="**TalentCLEF Task B - Codabench**">}}
 <div style="text-align:center">
- To Be Published
+ <a href="https://www.codabench.org/competitions/7059" target="_blank" >
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" class="full-width-image">
+    </br>
+  </a>
 </div>
 {{< /card >}}
 
@@ -44,10 +47,15 @@ The evaluation for TalentCLEF-2025 will be conducted on **Codabench**. Submissio
 
 ### Evaluation dates 
 
+#### Task A: 
 - **Start Date**: 21st April 2025
 - **End Date**: 5th May 2025
 
-Both Task A and Task B will be evaluated during this period.
+
+#### Task B: 
+- **Start Date**: 28st April 2025
+- **End Date**: 5th May 2025
+
 
 ### Evaluation Criteria
 

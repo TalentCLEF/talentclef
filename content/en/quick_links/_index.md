@@ -71,7 +71,11 @@ Links to TalentCLEF related resources:
 
 {{< card header="**TalentCLEF Task B - Codabench**">}}
 <div style="text-align:center">
- To Be Published
+ <a href="https://www.codabench.org/competitions/7059" target="_blank" >
+    <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" style="width: 200px; height: auto;">
+    </br>
+    TalentCLEF 2025 Task B CodaBench
+  </a>
 </div>
 {{< /card >}}
 
