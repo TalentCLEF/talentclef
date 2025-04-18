@@ -70,7 +70,7 @@ The data will be hosted on the Zenodo platform under the [*NLP in HR*](https://z
  
 The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and TaskB, each containing training, validation and test folders to suuport different stages of model development. Until the official release of the full training set, users can access a sample version of the data through the `sampleset_TaskA.zip` and `sampleset_TaskB.zip` files.
 
-**TaskA** includes language-specific subfolders within the training and validation directories, covering English, Spanish, German, and Chinese job title data. The tr*aining folders for TaskA contain language-specific .tsv files for each respective language. Validation folders include three essential files—queries, corpus_elements, and q_rels—for evaluating model relevance to search queries. TaskA’s test folder has queries and corpus_elements files for testing retrieval. 
+**TaskA** includes language-specific subfolders within the training and validation directories, covering English, Spanish, German, and Chinese job title data. The training folders for TaskA contain language-specific .tsv files for each respective language. Validation folders include three essential files—queries, corpus_elements, and q_rels—for evaluating model relevance to search queries. TaskA’s test folder has queries and corpus_elements files for testing every language considered. Participant can combine queries and corpus elements for the cross-lingual evaluation of the Task. The data can be found in the `TaskA.zip` file.
 
 <body>
     <ul>
@@ -125,8 +125,20 @@ The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and T
                         <li class="line">
                             <span class="folder">📁</span> test
                             <ul class="subfolder">
-                                <li><span class="file">📄</span> queries</li>
-                                <li><span class="file">📄</span> corpus_elements</li>
+                                <ul class="subfolder">
+                                <li class="line"><span class="folder">📁</span> english
+                                    <ul class="subfolder">
+                                        <li><span class="file">📄</span> queries</li>
+                                        <li><span class="file">📄</span> corpus_elements</li>
+                                    </ul>
+                                </li>
+                                <li class="line"><span class="folder">📁</span> spanish
+                                </li>
+                                <li class="line"><span class="folder">📁</span> german
+                                </li>
+                                <li class="line"><span class="folder">📁</span> chinese
+                                </li>
+                            </ul>
                             </ul>
                         </li>
                     </ul>
@@ -136,8 +148,7 @@ The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and T
 
  <br> 
 
-**TaskB** follows a similar structure but without language-specific subfolders, providing general .tsv files for training, validation, and testing. This consistent file organization enables efficient data access and structured updates as new data versions are published.
-
+**TaskB** follows a similar structure but without language-specific subfolders, providing general .tsv files for training, validation, and testing. This consistent file organization enables efficient data access and structured updates as new data versions are published. The data can be found in the `TaskB.zip` file.
 
 
 

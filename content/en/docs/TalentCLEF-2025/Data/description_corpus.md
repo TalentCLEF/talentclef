@@ -113,17 +113,15 @@ The training data is provided in a tabular format with three columns:
 
 
 3. **Test Set**:
-The test set consists of two components, which are designed to evaluate system predictions based on language and job title retrieval tasks. The participant should generate a *q_rels* based on the queries and corpus elements provided. 
+The test set is provided with two files: queries and corpus elements, and is provided separately for each language. For every language pair, participants need to generate a TREC Run File that adheres to the format specified in the [submission format section](docs/talentclef-2025/evaluation/submission_format/). The data structure is similar to the one from the validation files.
 
     - *Queries*: Contains the following fields:
         - *q_id*: A unique identifier for the query.
         - *jobtitle*: The job title used as the query.
-        - *lang*: The language of the corpus element's job title.
 
     - *Corpus Elements*: Contains:
         - *q_id*: A unique identifier for each corpus element.
         - *jobtitle*:  The job title from the corpus element.
-        - *lang*: The language of the corpus element's job title.
 
 </details>
 
@@ -252,15 +250,15 @@ dev_cb_sk_7	| http://data.europa.eu/esco/skill/d5c20065-1d1f-446b-8143-9d1e180c5
     </div>
 
 3. **Test Set**:
-    The test set consists of two files, `queries` and `corpus elements`. The participant should generate a *q_rels* file as prediction based on the queries and corpus elements provided. 
+    The test set consists of two files: `queries` and `corpus elements`. Participants are required to produce a TREC Run File adhering to the structure outlined in the [submission format section](docs/talentclef-2025/evaluation/submission_format/). The test set includes a background set in the queries. 
 
     - *Queries*: Contains the following fields:
         - *q_id*: A unique identifier for the query.
         - *jobtitle*: The job title used as the query.
 
     - *Corpus Elements*: Contains:
-        - *q_id*: A unique identifier for each corpus element.
-        - *skill*:  The skill associated with the corpus element.
-
+        - *c_id*: A unique identifier for each corpus element.
+        - *esco_uri*: The ESCO URIs associated to `c_id`.
+        - *skill_aliases*: The list aliases of the ESCO skill
 
 </details>
