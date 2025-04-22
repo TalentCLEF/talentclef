@@ -6,7 +6,7 @@ description: >
     Schedule and task deadlines
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task B Development data for is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665).
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task A Test data  is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665) and prepare your submission! **Reminder**: To be included in the benchmark, your team must register for the CLEF task on the [event website](https://clef2025-labs-registration.dei.unipd.it/) by 25th April.
 {{< /alert >}}
 
 | Status | Date                            | Event                                                       | Link |
@@ -17,8 +17,8 @@ description: >
 |<div style="text-align: center; color: green;">&#10004;</div> | 20th January 2025               | Training data available for Tasks A and B                    |  [Link](https://doi.org/10.5281/zenodo.14002665) |
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th February 2025              | Start of Task A with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665)  |
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th March 2025                 | Start of Task B with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665) | 
-|        | 21st April 2025                     | Task A Test set release    |  | 
-|        | 21st April - 5th May 2025       | Evaluation period of Task A                           |  | 
+| <div style="text-align: center; color: green;">&#10004;</div> | 21st April 2025                     | Task A Test set release    | [Link](https://doi.org/10.5281/zenodo.14002665) | 
+|<div style="text-align: center; color: green;"> 🔄</div> | 21st April - 5th May 2025       | Evaluation period of Task A                           | [Codabench Task A](https://www.codabench.org/competitions/5842/) | 
 |        | 28st April 2025                     | Task B Test set release    |  | 
 |        | 28st April - 5th May 2025       | Evaluation period of Task B                            |  | 
 |        | 7th May 2025                    | Publication of Official Results                              |  | 
