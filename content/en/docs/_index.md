@@ -6,7 +6,7 @@ menu:
     weight: 20
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task A Test data  is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665) and start preparing your submission! **Reminder**: To be included in the benchmark, your team must register for the CLEF task on the [event website](https://clef2025-labs-registration.dei.unipd.it/) by 25th April.
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task A and Task B Test data  is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665) and prepare your submission! **Reminder**: To be included in the benchmark, your team must register for the CLEF task on the [event website](https://clef2025-labs-registration.dei.unipd.it/) by 25th April.
 {{< /alert >}}
 
 
