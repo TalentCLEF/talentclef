@@ -18,13 +18,15 @@ description: >
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th February 2025              | Start of Task A with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665)  |
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th March 2025                 | Start of Task B with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665) | 
 | <div style="text-align: center; color: green;">&#10004;</div> | 21st April 2025                     | Task A Test set release    | [Link](https://doi.org/10.5281/zenodo.14002665) | 
-|<div style="text-align: center; color: green;"> 🔄</div> | 21st April - 5th May 2025       | Evaluation period of Task A                           | [Codabench Task A](https://www.codabench.org/competitions/5842/) | 
+|<div style="text-align: center; color: green;"> 🔄</div> | 21st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task A                           | [Codabench Task A](https://www.codabench.org/competitions/5842/) | 
 |<div style="text-align: center; color: green;">&#10004;</div> | 28st April 2025                     | Task B Test set release    |  [Link](https://doi.org/10.5281/zenodo.14002665) | 
-| <div style="text-align: center; color: green;"> 🔄</div>   | 28st April - 5th May 2025       | Evaluation period of Task B                            |[Codabench Task A](https://www.codabench.org/competitions/7059/) | 
-|        | 7th May 2025                    | Publication of Official Results                              |  | 
+| <div style="text-align: center; color: green;"> 🔄</div>   | 28st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task B                            |[Codabench Task A](https://www.codabench.org/competitions/7059/) | 
+|        | <del>7th May 2025</del><ins>12th May 2025</ins>               | Publication of Official Results                              |  | 
 |        | 30th May 2025                 | Submission of CLEF 2025 Working Notes           |  | 
 |        | 30th May - 27th June      | Review of Working Notes                        |   | 
 |        | 27th June 2025    | Notification of Acceptance for Participant Papers       |   | 
+
+
 
 {.td-table  .my-dark-table-style}
 
