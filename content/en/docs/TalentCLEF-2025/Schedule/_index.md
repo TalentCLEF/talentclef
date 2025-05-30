@@ -6,7 +6,8 @@ description: >
     Schedule and task deadlines
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task A and Task B Test data  is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665) and prepare your submission! **Reminder**: To be included in the benchmark, your team must register for the CLEF task on the [event website](https://clef2025-labs-registration.dei.unipd.it/) by 25th April.
+
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The deadline for submitting your Working Notes is **4th June**! Please make sure to submit your Working Notes via [EasyChair for CLEF2025](https://easychair.org/my/conference?conf=clef2025). Don’t miss the deadline to ensure your work is included in the official CLEF 2025 proceedings! [Here](https://drive.google.com/file/d/1C-n8-F6GmKIlP1Ng1I-xAlJjbkJ__0lV/view?usp=drive_link) you can find the guidelines to upload your work!
 {{< /alert >}}
 
 | Status | Date                            | Event                                                       | Link |
@@ -18,12 +19,12 @@ description: >
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th February 2025              | Start of Task A with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665)  |
 |<div style="text-align: center; color: green;">&#10004;</div> | 17th March 2025                 | Start of Task B with the release of the development data     | [Link](https://doi.org/10.5281/zenodo.14002665) | 
 | <div style="text-align: center; color: green;">&#10004;</div> | 21st April 2025                     | Task A Test set release    | [Link](https://doi.org/10.5281/zenodo.14002665) | 
-|<div style="text-align: center; color: green;"> 🔄</div> | 21st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task A                           | [Codabench Task A](https://www.codabench.org/competitions/5842/) | 
+|<div style="text-align: center; color: green;">&#10004;</div>   | 21st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task A                           | [Codabench Task A](https://www.codabench.org/competitions/5842/) | 
 |<div style="text-align: center; color: green;">&#10004;</div> | 28st April 2025                     | Task B Test set release    |  [Link](https://doi.org/10.5281/zenodo.14002665) | 
-| <div style="text-align: center; color: green;"> 🔄</div>   | 28st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task B                            |[Codabench Task A](https://www.codabench.org/competitions/7059/) | 
-|        | <del>7th May 2025</del><ins>12th May 2025</ins>               | Publication of Official Results                              |  | 
-|        | 30th May 2025                 | Submission of CLEF 2025 Working Notes           |  | 
-|        | 30th May - 27th June      | Review of Working Notes                        |   | 
+| <div style="text-align: center; color: green;">&#10004;</div>   | 28st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task B                            |[Codabench Task B](https://www.codabench.org/competitions/7059/) | 
+| <div style="text-align: center; color: green;">&#10004;</div>   | <del>7th May 2025</del><ins>12th May 2025</ins>               | Publication of Official Results                              | [Task A](https://doi.org/10.5281/zenodo.14002665) and [Task B](https://doi.org/10.5281/zenodo.14002665)  | 
+|        | <del>30th May 2025</del><ins>4th June 2025</ins>                  | Submission of CLEF 2025 Working Notes           |  | 
+|        | 4th June 2025 - 27th June      | Review of Working Notes                        |   | 
 |        | 27th June 2025    | Notification of Acceptance for Participant Papers       |   | 
 
 

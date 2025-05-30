@@ -4,7 +4,8 @@ weight: 2
 type: docs
 description: Information about registration procedures
 ---
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The Task A and Task B Test data  is now available! Download it from Zenodo [here](https://doi.org/10.5281/zenodo.14002665) and prepare your submission! **Reminder**: To be included in the benchmark, your team must register for the CLEF task on the [event website](https://clef2025-labs-registration.dei.unipd.it/) by 25th April.
+
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The deadline for submitting your Working Notes is **4th June**! Please make sure to submit your Working Notes via [EasyChair for CLEF2025](https://easychair.org/my/conference?conf=clef2025). Don’t miss the deadline to ensure your work is included in the official CLEF 2025 proceedings! [Here](https://drive.google.com/file/d/1C-n8-F6GmKIlP1Ng1I-xAlJjbkJ__0lV/view?usp=drive_link) you can find the guidelines to upload your work!
 {{< /alert >}}
 
-Registration for <strong>Talent</strong>CLEF 2025 is now open. You can register [here](https://clef2025-labs-registration.dei.unipd.it/). Once registered, participants will be periodically informed about new dataset releases, as well as the different phases and deadlines of the evaluation campaign. 
+Registration for <strong>Talent</strong>CLEF 2025 is now closed.
