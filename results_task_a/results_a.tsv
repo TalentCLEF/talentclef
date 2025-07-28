@@ -1,0 +1,34 @@
+Team	run_ID	Base model	Type Model	Model type	Model size	Method	Type	Loss	LLM usage	External data	Bias handling	Avg.MAP (en,es,de)	MAP(en-en)	MAP(es-es)	MAP(de-de)	MAP(zh-zh)	MAP(en-es)	MAP(en-de)	MAP(en-zh)
+AlexU-NLP	283782	multilingual-e5-large-instruct	Multilingual Encoder	Encoder	560M	Retrieval	Contrastive Learning	InfoNCE	n/a	ESCO data	n/a	0.534	0.559	0.527	0.516	0.508279			
+AlexU-NLP	284958	multilingual-e5-large-instruct	Multilingual Encoder	Encoder	560M	Retrieval+Reranking	Contrastive Learning	InfoNCE	n/a	ESCO data	n/a	0.530130	0.553847	0.521771	0.514772	0.507392	0.516171	0.512096	
+AlexU-NLP	285039	multilingual-e5-large-instruct	Multilingual Encoder	Encoder	560M	Retrieval	Contrastive Learning	InfoNCE	n/a	ESCO data	n/a	0.529621	0.553069	0.521156	0.514637	0.506392	0.515810	0.511100	
+AlexU-NLP	284859	multilingual-e5-large-instruct	Multilingual Encoder	Encoder	560M	Retrieval+Reranking	Contrastive Learning	InfoNCE	Reranking	ESCO data	n/a	0.520270	0.541623	0.516478	0.502710	0.505059	0.509853	0.502827	
+TechWolf	284991	paraphrase-multilingual-mpnet-base-v2	Multilingual Encoder	Encoder	278M	Retrieval	Contrastive Learning	InfoNCE	Data Translation	Internal data	n/a	0.517	0.533	0.519	0.500	0.509894	0.510495	0.498100	0.515059
+pjmathematician	275330	Alibaba-NLP/gte-Qwen2-7B-instruct	Multilingual Decoder	Decoder	7B	Retrieval	Contrastive Learning	CachedGIST	n/a	ESCO data	n/a	0.515	0.563	0.507	0.476	0.515862	0.524782	0.503916	0.523590
+NLPnorth	276154	Alibaba-NLP/gte-Qwen2-7B-instruct	Multilingual Decoder	Decoder	7.61B	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.492	0.537	0.496	0.442	0.494861	0.492125	0.461415	0.493663
+NLPnorth	276289	ntfloat/multilingual-e5-large	Multilingual Encoder	Encoder	560M	Retrieval	Contrastive Learning	InfoNCE	n/a	ESCO data	n/a	0.480408	0.511051	0.446499	0.483674	0.476700	0.433694	0.468821	0.479561
+pjmathematician	275315	BAAI/bge-m3	Multilingual Encoder	Encoder	569M	Retrieval	Contrastive Learning	GIST	Data Translation	ESCO data	n/a	0.478032	0.496177	0.479438	0.458479	0.427452	0.452255	0.441160	0.439188
+pjmathematician	275317	Alibaba-NLP/gte-multilingual-base	Multilingual Encoder	Encoder	305M	Retrieval	Contrastive Learning	GIST	Data Translation	ESCO data	n/a	0.476946	0.520268	0.461904	0.448665	0.446787	0.452669	0.449067	0.475771
+NLPnorth	276155	Linq-AI-Research/Linq-Embed-Mistral	Multilingual Decoder	Decoder	7.11B	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.474032	0.489086	0.467200	0.465810	0.487151	0.454838	0.467939	0.454303
+NT	284052	multilingual-e5-large, text-embedding-3-large, gemini-embedding-exp-03-07	Multilingual Encoder	Encoder	560M	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.464	0.523	0.466	0.404	0.497134			
+SCaLAR	284749	paraphrase-multilingual-mpnet-base-v2	Multilingual Encoder	Encoder	278M	Retrieval	Contrastive Learning	InfoNCE	n/a	ESCO data	n/a	0.446	0.473	0.438	0.427		0.366007	0.370005	
+NLPnorth	279236	intfloat/multilingual-e5-large-instruct	Multilingual Encoder	Encoder	560M	Retrieval	Classification	CrossEntropy	n/a	No	n/a	0.438603	0.489582	0.420516	0.405710	0.443675			
+HULAT-UC3M	279708	multilingual-e5-large-instruct	Multilingual Encoder	Encoder	568M	Retrieval+Reranking	Contrastive Learning	InfoNCE	n/a	No	n/a	0.420	0.479	0.420	0.360	0.349505	0.416466	0.364987	0.315233
+HULAT-UC3M	280184	snowflake-arctic-embed-l-v2.0	Multilingual Encoder	Encoder	568M	Retrieval	Contrastive Learning	InfoNCE	n/a	No	n/a	0.419768	0.479012	0.420049	0.360243	0.414683	0.416466	0.364987	0.394359
+UDII-UPM	276052	MPNET base v2+DistilUSE multilingual cased v1	Monolingual Encoder	Encoder	278M	Retrieval	Ensemble	n/a	n/a	No	n/a	0.414	0.448	0.415	0.377	0.450744	0.382684	0.374942	0.426119
+pjmathematician	275311	BAAI/bge-small-en-v1.5	Multilingual Encoder	Encoder	33.4M	Retrieval	Contrastive Learning	GIST	Data Translation	ESCO data	n/a	0.411465	0.507774	0.386868	0.339752	0.141832	0.324538	0.306685	0.108640
+pjmathematician	275332	Alibaba-NLP/gte-multilingual-base	Multilingual Encoder	Encoder	60M	Retrieval	Distillation	MSE	Data Translation	ESCO data	n/a	0.406156	0.440735	0.397516	0.380218	0.448423	0.363359	0.353163	0.396260
+DS@GT - TalentCLEF	285019	MPNet	Monolingual Encoder	Encoder	278M	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.399	0.440	0.402	0.355	0.421103	0.023252	0.018736	
+HULAT-UC3M	279717	snowflake-arctic-embed-l-v2.0 with Gemini 2.5 Flash	Multilingual Encoder	Encoder	568M	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.391740	0.477964	0.352461	0.344795	0.432752	0.366148	0.335193	0.394267
+VerbaNexAI	284612	MiniLM	Multilingual Encoder	Encoder	118M	Retrieval	Contrastive Learning	n/a	n/a	No	n/a	0.360	0.408	0.348	0.324		0.334593	0.343966	
+DS@GT - TalentCLEF	285027	MPNet	Monolingual Encoder	Encoder	278M	Retrieval	Contrastive Learning	n/a	n/a	No	n/a	0.360177	0.407967	0.348306	0.324258	0.379702	0.023252	0.018736	
+TalentCLEF Baseline		paraphrase-multilingual-MiniLM-L12-v2 	Multilingual Encoder	Encoder	118M	Retrieval	Zero-shot	n/a	n/a	No	n/a	0.360	0.408	0.348	0.324				
+VerbaNexAI	284606	MiniLM	Multilingual Encoder	Encoder	118M	Retrieval	Contrastive Learning	n/a	n/a	No	n/a	0.359207	0.385869	0.353886	0.337867				
+SkillSeekers	284999	paraphrase-multilingual-mpnet-base-v2	Multilingual Encoder	Encoder	278M	Retrieval	Contrastive Learning	n/a	n/a	No	n/a	0.353972	0.354593	0.360181	0.347142	0.411660			
+HULAT-UC3M	280322	snowflake-arctic-embed-l-v2.0 with Gemini 2.5 Flash	Multilingual Encoder	Encoder	568M	Retrieval	Contrastive Learning	InfoNCE	n/a	No	n/a	0.184259	0.188064	0.188110	0.176604	0.170239	0.182736	0.186779	0.195732
+HULAT-UC3M	279686	snowflake-arctic-embed-l-v2.0 with Gemini 2.5 Flash	Multilingual Encoder	Encoder	568M	Retrieval+Reranking	Contrastive Learning	InfoNCE	Reranking	No	Mitigation via prompting	0.183281	0.193727	0.183648	0.172467	0.168235	0.159960	0.178081	0.185287
+Ixa	285265	Llama 3.3		Decoder	70B	Retrieval	Zero-shot	n/a	Reranking	ESCO data	Removal of gender markers	0.180541	0.198989	0.173152	0.169484				
+Ixa	285270	Llama 3.3		Decoder	70B	Retrieval	Zero-shot	n/a	Reranking	ESCO data	Removal of gender markers	0.177947	0.200339	0.165907	0.167595				
+Ixa	285272	Llama 3.3		Decoder	70B	Retrieval	Zero-shot	n/a	Reranking	ESCO data	Removal of gender markers	0.153094	0.159150	0.150437	0.149696				
+Ixa	285264	Llama 3.3		Decoder	70B	Retrieval+Reranking	Zero-shot	n/a	Reranking	ESCO data	n/a	0.143527	0.198989	0.121914	0.109679				
+Ixa	285268	Llama 3.3		Decoder	70B	Retrieval+Reranking	Zero-shot	n/a	Reranking	ESCO data	n/a	0.140596	0.200339	0.115187	0.106263				

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <style>
+    body { font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; background: #ffffff; color: #252525; margin: 0; padding: 0 0 40px 0; }
+    body { margin: 0; padding: 0; }
+    main { max-width: 1080px; margin: 36px auto 0 auto; background: #fff; border-radius: 14px; box-shadow: 0 2px 18px 0 rgba(90,120,160,0.06); padding: 36px 30px 28px 30px; border: 1.5px solid #e5e7eb; }
+    main { box-shadow: none; border: none; margin: 0; }
+
+    h2 { font-size: 2.1rem; font-weight: 700; color: #2978C7; margin-bottom: 10px; letter-spacing: -0.02em; }
+    #controls { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 18px; align-items: center; }
+    #controls label { font-weight: 500; color: #374151; margin-right: 7px; }
+    #controls select { padding: 8px 12px; border-radius: 8px; border: 1px solid #cfd7e3; font-size: 1rem; background: #f8fafc; color: #23272f; min-width: 110px; transition: border-color .2s; }
+    #controls button { padding: 8px 24px; border-radius: 10px; background: #2978C7; color: #fff; border: none; font-size: 1rem; font-weight: 600; cursor: pointer; box-shadow: 0 2px 8px rgba(41,120,199,0.07); transition: background 0.14s; margin-left: 8px; }
+    #controls button:hover { background: #195b93; }
+    #plot { margin: 22px 0 38px 0; border-radius: 10px; background: #f4f7fa; box-shadow: 0 2px 10px rgba(41,120,199,0.04); padding: 8px; min-height: 320px; }
+    @media (max-width: 900px) { main { padding: 13px; } #controls { flex-direction: column; align-items: stretch; } #plot { padding: 1px; } }
+  </style>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+<main>
+  <section id="controls">
+    <label for="yvar">Y:</label>
+    <select id="yvar"></select>
+    <label for="colorvar">Color:</label>
+    <select id="colorvar"></select>
+    <button id="download">Download chart</button>
+  </section>
+  <div id="plot"></div>
+</main>
+<script>
+const tsvPath = "results_b.tsv";
+
+let dataRows = [];
+let columns = [];
+let numericColumns = [];
+const modelSizeCol = "Model size";
+
+// Only allow these for Color
+const colorCols = ["Team","Base Model","Model type","Method","Type","Loss","LLM usage","External data","Bias handling"];
+
+// Metrics for Y axis
+const metricCols = [
+  "MAP","MRR","NDCG"
+];
+
+function parseModelSize(val) {
+  if (typeof val === "number") return val;
+  if (!val || typeof val !== "string") return NaN;
+  const m = val.replaceAll(" ", "").match(/^([\d\.]+)([KMBkmb])$/);
+  if (!m) return parseFloat(val.replaceAll(",", ""));
+  const num = parseFloat(m[1]);
+  const suffix = m[2].toUpperCase();
+  if (suffix === "K") return num * 1e3;
+  if (suffix === "M") return num * 1e6;
+  if (suffix === "B") return num * 1e9;
+  return num;
+}
+function isNumericCol(rows, col) {
+  if (col === modelSizeCol) {
+    let valid = 0, total = 0;
+    rows.forEach(r => {
+      if (r[col] !== undefined && r[col] !== null && r[col] !== "") {
+        total++;
+        if (!isNaN(parseModelSize(r[col]))) valid++;
+      }
+    });
+    return total > 0 && valid / total > 0.7;
+  }
+  let valid = 0, total = 0;
+  rows.forEach(r => {
+    if (r[col] !== undefined && r[col] !== null && r[col] !== "") {
+      total++;
+      if (!isNaN(parseFloat(r[col]))) valid++;
+    }
+  });
+  return total > 0 && valid / total > 0.7;
+}
+function setSelectOptions(select, options) {
+  // Remove all old options and any selected value!
+  select.innerHTML = "";
+  options.forEach(o => {
+    const opt = document.createElement("option");
+    opt.value = o;
+    opt.textContent = o;
+    select.appendChild(opt);
+  });
+  // If there are options, set the first as selected; else clear selection
+  if (options.length > 0) {
+    select.selectedIndex = 0;
+  }
+}
+
+function updateSelectors() {
+  setSelectOptions(
+    document.getElementById("yvar"),
+    metricCols.filter(c => columns.includes(c))
+  );
+  // Only show colorCols that exist in this dataset
+  const allowedColors = colorCols.filter(c => columns.includes(c));
+  setSelectOptions(
+    document.getElementById("colorvar"),
+    allowedColors
+  );
+  // Set default Y axis selection
+  if (columns.includes("MAP")) {
+    document.getElementById("yvar").value = "MAP";
+  } else {
+    const first = metricCols.find(c => columns.includes(c));
+    if(first) document.getElementById("yvar").value = first;
+  }
+}
+
+function getNumericValue(row, col) {
+  if (col === modelSizeCol) return parseModelSize(row[col]);
+  return parseFloat(row[col]);
+}
+function updatePlot() {
+  const xvar = modelSizeCol;
+  const yvar = document.getElementById("yvar").value;
+  const colorvar = document.getElementById("colorvar").value;
+  if (!xvar || !yvar || !colorvar) {
+    document.getElementById("plot").innerHTML = "<div style='color: #777; text-align:center;'>Select columns to visualize the chart</div>";
+    return;
+  }
+  const filtered = dataRows.filter(row =>
+    row[xvar] !== null && row[xvar] !== "" && !isNaN(getNumericValue(row, xvar)) &&
+    row[yvar] !== null && row[yvar] !== "" && !isNaN(getNumericValue(row, yvar))
+  );
+  if (!filtered.length) {
+    document.getElementById("plot").innerHTML = "<div style='color: #777; text-align:center;'>Not enough numeric data to plot</div>";
+    return;
+  }
+  const groups = {};
+  filtered.forEach(row => {
+    let g = row[colorvar];
+    if (g === undefined || g === null || g === "") g = "No value";
+    if (!groups[g]) groups[g] = { x: [], y: [], text: [] };
+    groups[g].x.push(getNumericValue(row, xvar));
+    groups[g].y.push(getNumericValue(row, yvar));
+    groups[g].text.push(columns.map(k => `${k}: ${row[k]}`).join('<br>'));
+  });
+  const palette = [
+    "#2978C7","#D72660","#11A9A3","#F46036","#495867","#87BFFF",
+    "#27B9C2","#F9C846","#B799FF","#FF9066","#A8D5BA","#F4D35E"
+  ];
+  let idx = 0;
+  const traces = Object.entries(groups).map(([name, grp]) => ({
+    x: grp.x, y: grp.y, text: grp.text, name,
+    mode: 'markers', type: 'scatter',
+    marker: { size: 12, color: palette[idx++ % palette.length] }
+  }));
+  Plotly.newPlot("plot", traces, {
+    title: `${yvar} vs Model size (#params...)`,
+    xaxis: { title: "Model size (#params...)", type: 'log' },
+    yaxis: { title: yvar },
+    legend: { orientation: "h" },
+    plot_bgcolor: '#f4f7fa',
+    paper_bgcolor: '#f4f7fa',
+    font: { family: "Inter, Roboto, Arial, sans-serif", color: "#252525" },
+    height: 600
+  }, {responsive: true});
+}
+
+function loadTSV() {
+  fetch(tsvPath)
+    .then(response => {
+      if (!response.ok) throw new Error("Could not load the TSV file");
+      return response.text();
+    })
+    .then(text => {
+      Papa.parse(text, {
+        header: true, delimiter: "\t", dynamicTyping: false,
+        complete: results => {
+          dataRows = results.data.filter(r => Object.values(r).some(v => v != null && v !== ''));
+          columns = Object.keys(dataRows[0] || {});
+          numericColumns = columns.filter(col => isNumericCol(dataRows, col));
+          updateSelectors();
+          updatePlot();
+        }
+      });
+    })
+    .catch(error => {
+      document.getElementById("plot").innerHTML = "<div style='color: #D72660; text-align:center;'>Could not load the file '" + tsvPath + "'</div>";
+    });
+}
+
+["yvar","colorvar"].forEach(id => {
+  document.getElementById(id).addEventListener("change", updatePlot);
+});
+document.getElementById("download").addEventListener("click", () =>
+  Plotly.downloadImage('plot', { format: 'png', filename: 'taskA_results' })
+);
+
+// Automatically load the TSV file on page load:
+loadTSV();
+</script>
+</body>
+</html>
