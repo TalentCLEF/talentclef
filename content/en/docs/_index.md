@@ -6,9 +6,11 @@ menu:
     weight: 20
 ---
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The deadline for submitting your Working Notes is **4th June**! Please make sure to submit your Working Notes via [EasyChair for CLEF2025](https://easychair.org/my/conference?conf=clef2025). Don’t miss the deadline to ensure your work is included in the official CLEF 2025 proceedings! [Here](https://drive.google.com/file/d/1C-n8-F6GmKIlP1Ng1I-xAlJjbkJ__0lV/view?usp=drive_link) you can find the guidelines to upload your work!
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> The schedule for the **TalentCLEF Workshop at CLEF 2025** is now available! You can view the full program [here](/talentclef/docs/talentclef-2025/workshop/workshop_schedule).  
+For details about the overall CLEF 2025 schedule, please check the official programme [here](https://clef2025.clef-initiative.eu/index.php?page=Pages/programme.html).  
+Don't forget to [register for the conference](https://clef2025.clef-initiative.eu/index.php?page=Pages/registrationConference.html) to secure your participation.  
+We look forward to seeing you at CLEF 2025!
 {{< /alert >}}
-
 
 ### Current task schedule
 
@@ -25,9 +27,10 @@ menu:
 |<div style="text-align: center; color: green;">&#10004;</div> | 28st April 2025                     | Task B Test set release    |  [Link](https://doi.org/10.5281/zenodo.14002665) | 
 | <div style="text-align: center; color: green;">&#10004;</div>   | 28st April - <del>5th</del><ins>10th</ins> May 2025       | Evaluation period of Task B                            |[Codabench Task B](https://www.codabench.org/competitions/7059/) | 
 | <div style="text-align: center; color: green;">&#10004;</div>   | <del>7th May 2025</del><ins>12th May 2025</ins>               | Publication of Official Results                              | [Task A](https://doi.org/10.5281/zenodo.14002665) and [Task B](https://doi.org/10.5281/zenodo.14002665)  | 
-|        | <del>30th May 2025</del><ins>4th June 2025</ins>                  | Submission of CLEF 2025 Working Notes           |  | 
-|        | 4th June 2025 - 27th June      | Review of Working Notes                        |   | 
-|        | 27th June 2025    | Notification of Acceptance for Participant Papers       |   | 
+| <div style="text-align: center; color: green;">&#10004;</div>  | <del>30th May 2025</del><ins>4th June 2025</ins>                  | Submission of CLEF 2025 Working Notes           |  | 
+|  <div style="text-align: center; color: green;">&#10004;</div> | 4th June 2025 - 27th June      | Review of Working Notes                        |   | 
+| <div style="text-align: center; color: green;">&#10004;</div>  | 27th June 2025    | Notification of Acceptance for Participant Papers       |   | 
+|  | 9-12 September 2025    | CLEF 2025 - Madrid       |  [Link](https://clef2025.clef-initiative.eu/index.php?page=Pages/programme.html) | 
 
 
 

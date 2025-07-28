@@ -1,5 +1,5 @@
 ---
-title: Task B results
+title: Task B Results
 date: 2017-01-05
 categories: [Examples]
 weight: 3
@@ -12,6 +12,33 @@ type: docs
         }
 </style>
 
+Below you will find the official results for Task B of TalentCLEF. This section provides both a graphical overview and a detailed table of the full results. The interactive visualizations are designed to help you explore and analyze the performance of participating systems based on different criteria. For further details or questions regarding the evaluation, please refer to the official publication or contact the organizers.
 
-{{< alert color="warning" title="Info." >}}Official results of Task B will be shown here
- {{< /alert >}}
+ <style>
+.full-width-image {
+    width: 80%;
+    height: auto;
+}
+
+.responsive-iframe {
+    width: 100vh;
+    min-width: 0;
+    max-width: 100vw;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    display: block;
+    height: 778px; /* O el alto justo para tu gráfico */
+    overflow: hidden;
+    background: #fff
+}
+
+</style>
+
+## Graphical representation
+<iframe class="responsive-iframe" src="/talentclef/results_task_b/table_b_interactive.html"></iframe>
+
+## Table
+<iframe class="responsive-iframe" src="/talentclef/results_task_b/table_b_table.html"></iframe>

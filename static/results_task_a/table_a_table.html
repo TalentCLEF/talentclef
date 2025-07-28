@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
+  <style>
+    body { font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; background: #f8fafc; color: #252525; margin: 0; padding: 0 0 40px 0;}
+    main { max-width: 100%; margin: 0; background: transparent; border-radius: 0; box-shadow: none; padding: 0; border: none; }
+    h2 { font-size: 2.1rem; font-weight: 700; color: #2978C7; margin-bottom: 10px; letter-spacing: -0.02em; }
+    #controls { display: flex; flex-wrap: wrap; gap: 18px; margin-bottom: 18px; align-items: center; }
+    #controls label { font-weight: 500; color: #374151; margin-right: 7px; }
+    table.dataTable { border-radius: 10px !important; overflow: hidden; background: #fff; margin-top: 8px; border: 1.2px solid #e5e7eb; }
+    .dataTables_wrapper .dataTables_filter input { border-radius: 7px; border: 1px solid #cfd7e3; padding: 5px 8px; margin-left: 7px; background: #f8fafc; color: #23272f; }
+    .dataTables_wrapper .dataTables_paginate .paginate_button { background: #f8fafc; border-radius: 6px; border: 1px solid #e5e7eb; color: #2978C7 !important; margin: 0 2px; transition: background 0.18s;}
+    .dataTables_wrapper .dataTables_paginate .paginate_button.current { background: #2978C7 !important; color: #fff !important; border: 1.3px solid #2978C7 !important;}
+    .dataTables_length select { border-radius: 7px; border: 1px solid #cfd7e3; background: #f8fafc; color: #23272f; padding: 4px 8px; margin-left: 5px;}
+    .dtfc-fixed-left { background: #fff !important; }
+    @media (max-width: 900px) { main { padding: 13px; } #controls { flex-direction: column; align-items: stretch; } }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+<main>
+  <div>
+    <table id="resultTable" class="display" style="width:100%">
+      <thead><tr id="tableHead"></tr></thead>
+      <tbody id="tableBody"></tbody>
+    </table>
+  </div>
+</main>
+<script>
+const tsvPath = "results_a.tsv";  // Cambia este valor si tu archivo está en otra ruta
+
+let dataRows = [];
+let columns = [];
+let dataTable = null;
+
+// Utilidad para buscar la columna con nombre más flexible
+function findCol(nameList, columns) {
+  for (let n of nameList) {
+    let c = columns.find(x => x.trim() === n.trim());
+    if (c) return c;
+  }
+  return null;
+}
+
+function updateTable(rows) {
+  // Log para depurar columnas
+  console.log("Columnas detectadas:", columns);
+
+  // Ajusta los nombres según el TSV real
+  const teamCol = findCol(["Team"], columns) || columns[0];
+  const runIDCol = findCol(["run_ID", "run id", "Run_ID"], columns) || columns[1];
+  const mapCol = findCol(["Avg.MAP (en,es,de)", "Avg.MAP(en,es,de)", "Avg.MAP", "Avg.MAP (en, es, de)"], columns);
+
+  // El resto de columnas
+  const firstCols = [teamCol, runIDCol, mapCol].filter(Boolean);
+  const extraCols = columns.filter(c => !firstCols.includes(c));
+  // Orden final
+  columns = [...firstCols, ...extraCols];
+
+  const head = document.getElementById("tableHead");
+  const body = document.getElementById("tableBody");
+  head.innerHTML = ""; body.innerHTML = "";
+  columns.forEach(col => { head.innerHTML += `<th>${col}</th>`; });
+  rows.forEach((r, i) => {
+    const tr = document.createElement("tr");
+    columns.forEach(col => tr.innerHTML += `<td>${r[col]}</td>`);
+    body.appendChild(tr);
+  });
+  if (dataTable) dataTable.destroy();
+
+  // Ordenar por Avg.MAP si existe
+  const orderColIdx = columns.indexOf(mapCol) >= 0 ? columns.indexOf(mapCol) : 0;
+
+  // Inicializa DataTable con columnas fijas (las dos primeras)
+  dataTable = $('#resultTable').DataTable({
+    scrollX: true,
+    pageLength: 7,
+    order: [[orderColIdx, "desc"]],
+    fixedColumns: {
+      leftColumns: 2 // Team y run_ID fijos a la izquierda
+    }
+  });
+}
+
+function loadTSV() {
+  fetch(tsvPath)
+    .then(response => {
+      if (!response.ok) throw new Error("No se pudo cargar el archivo TSV");
+      return response.text();
+    })
+    .then(text => {
+      Papa.parse(text, {
+        header: true, delimiter: "\t", dynamicTyping: false,
+        complete: results => {
+          dataRows = results.data.filter(r => Object.values(r).some(v => v != null && v !== ''));
+          columns = Object.keys(dataRows[0] || {});
+          updateTable(dataRows);
+        }
+      });
+    })
+    .catch(error => {
+      document.getElementById("resultTable").outerHTML = "<div style='color: #D72660; text-align:center;margin:2em 0'>No se pudo cargar el archivo '" + tsvPath + "'</div>";
+    });
+}
+
+window.onload = loadTSV;
+</script>
+</body>
+</html>
