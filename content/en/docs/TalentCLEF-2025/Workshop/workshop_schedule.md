@@ -27,6 +27,8 @@ type: docs
           <em>Javier Rodríguez-Vidal, Ascensión López-Vargas, Pablo Manuel Vigara Gallego, Francisco Javier Del Álamo, Ángel García-Beltrán</em></li>
           <li><strong>VerbaNex at TalentCLEF2025: Semantic Matching of Multilingual Job Titles through a Framework Integrating ESCO Taxonomy</strong> <br>
           <em>Melissa Moreno Novoa, Juan Carlos Martinez-Santos, Jairo Serrano, Edwin Puertas</em></li>
+          <li><strong>Multilingual Job Title Matching with MPNet-Based Sentence Transformers</strong> <br>
+          <em>Adam Brikman, Michael Sana, Holden Ruegger</em></li>
           <li><strong>A Two-Stage Multilingual Job Title Matching System: Combining Expert Knowledge and LLM-based Ranking</strong><br>
           <em>Mar Rodríguez, Olatz Perez-de-Viñaspre, Naiara Perez</em></li>
         </ul>
