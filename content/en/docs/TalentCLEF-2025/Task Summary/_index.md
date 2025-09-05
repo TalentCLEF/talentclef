@@ -25,7 +25,7 @@ The TalentCLEF 2025 task is structured into two independent sub-tasks, each taki
 
 **Multilingual**: Participants are required to develop systems adapted to English, Spanish, German, and optionally, Chinese. 
 
-**Data**: More information about data will be shown in <a  href='{{< relref "description_corpus" >}}'> Data section</a>, but essentially we will provide: 
+**Data**: More information about data will be shown in <a  href='{{< relref "docs/talentclef-2025/data/description_corpus" >}}'> Data section</a>, but essentially we will provide: 
 
 - *Training Set*: A collection of 15,000 pairs of related job titles per language (English, Spanish, and German), each labeled with a concept identifier, will be provided to facilitate the creation of cross-language training samples. No training data will be provided in Chinese, opening the possibility to use different techniques to improve the performance of the models in this language.
 
@@ -33,7 +33,7 @@ The TalentCLEF 2025 task is structured into two independent sub-tasks, each taki
 
 - *Test set*: A background set comprising 5,000 job titles will be provided. The evaluation, however, will be conducted on a subset of the background set, that will be a gold standard corpus of 100 job titles in each language annotated with the same methodology as the development set. 
 
-**Evaluation**: Details about evaluation will be placed in <a  href='{{< relref "evaluation" >}}'> Evaluation page</a>, but the model performance will be evaluated with information retrieval metrics, being the **Mean Average Precision (MAP) the official metric of the task**, although results will be provided in other metrics such as Mean Reciprocal Rank (MRR) and Precision@K(1,5,10).
+**Evaluation**: Details about evaluation will be placed in <a  href='{{< relref "docs/talentclef-2025/evaluation/" >}}'> Evaluation page</a>, but the model performance will be evaluated with information retrieval metrics, being the **Mean Average Precision (MAP) the official metric of the task**, although results will be provided in other metrics such as Mean Reciprocal Rank (MRR) and Precision@K(1,5,10).
 
 
 #### **Task B: Job Title-Based Skill Prediction**
@@ -41,7 +41,7 @@ The TalentCLEF 2025 task is structured into two independent sub-tasks, each taki
 **Goal**: Develop systems capable of retrieving relevant skills associated with a given job title. 
 
 
-**Data**: More information about data will be shown in <a  href='{{< relref "description_corpus" >}}'> Data section</a>, but essentially we will provide: 
+**Data**: More information about data will be shown in <a  href='{{< relref "docs/talentclef-2025/data/description_corpus" >}}'> Data section</a>, but essentially we will provide: 
 
 - *Training set*: A training set of at least 5.000 job titles along with the professional skills required for each position will be provided. This data is sourced from actual job descriptions and semi-automatically curated to ensure high accuracy in the training set.
 
@@ -49,6 +49,6 @@ The TalentCLEF 2025 task is structured into two independent sub-tasks, each taki
 
 - *Test set*: The test set comprises a list of 500 job titles. The participants will be required to predict the related skills using the provided gazetteer. 
 
-**Evaluation**: Details about evaluation will be placed in <a  href='{{< relref "evaluation" >}}'> Evaluation page</a>, but the model performance in this task will be also evaluated with information retrieval metrics, being the **Mean Average Precision (MAP) the official metric of the task**, although results will be provided in other metrics such as Mean Reciprocal Rank (MRR) and Precision@K(1,5,10).
+**Evaluation**: Details about evaluation will be placed in <a  href='{{< relref "docs/talentclef-2025/evaluation/" >}}'> Evaluation page</a>, but the model performance in this task will be also evaluated with information retrieval metrics, being the **Mean Average Precision (MAP) the official metric of the task**, although results will be provided in other metrics such as Mean Reciprocal Rank (MRR) and Precision@K(1,5,10).
 
 
