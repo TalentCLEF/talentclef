@@ -6,7 +6,6 @@ weight: 3
 type: docs  
 ---
 
-> Tentative Schedule that might change in the near future.
 
 
 <table>
@@ -46,8 +45,6 @@ type: docs
         <ul>
           <li><strong>Keynote presentation: Human-AI Interaction for the Future of Work</strong><br>
           <a href="https://comarios.com/" target="_blank"><em>Marios Constantinides (CYENS Centre of Excellence, Cyprus)</em></a></li>
-          <li><strong>NT Team at Multilingual Job Title Matching Task A: Job Matching via Large Language Model-Based Description Generation and Retrieval</strong><br>
-          <em>Ho Thuy Nga, Ho Thi Thanh Tuyen, Dang Van Thin</em></li>
           <li><strong>HULAT-UC3M at TalentCLEF: Artificial Intelligence and Natural Language Processing applied to HR Management</strong><br>
           <em>Álvaro Tejera Villar, Isabel Segura Bedmar</em></li>
           <li><strong>TechWolf at TalentCLEF 2025: Multilingual JobBERT-V2 for Cross-Lingual Job Title Matching</strong><br>
@@ -65,8 +62,6 @@ type: docs
         <ul>
           <li><strong>pjmathematician at TalentCLEF 2025: Enhancing Job Title and Skill Matching with GISTEmbed and LLM-Augmented Data</strong><br>
           <em>Poojan Vachharajani</em></li>
-          <li><strong>Fine-Tuned Sentence Transformer for Multilingual Job Title Matching</strong> <br>
-          <em>Chinmay Satish Bhangale, Prajwal Anil Gabhane, Anand Kumar Madasamy</em></li>
           <li><strong>Enhancing Human Capital Management: AI Techniques for Candidate Matching and Skill Extraction</strong><br>
           <em>Muhammad Hasan Nizami, Ahtisham Uddin, Muhammad Talha Salani, Ayesha Saeed, Faisal Alvi, Abdul Samad</em></li>
           <li><strong>COTECMAR–UTB at TalentCLEF 2025: Linking Job Titles and ESCO Skills with Sentence Transformer Embeddings</strong><br>
