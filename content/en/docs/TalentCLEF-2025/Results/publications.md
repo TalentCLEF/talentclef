@@ -111,7 +111,7 @@ type: docs
 }
 </style>
 
-{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> Links to the papers will be published as soon as the CEUR-WS proceedings are online. Stay tuned!
+{{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> Links to the CEUR Proceedings [here](https://ceur-ws.org/Vol-4038)
 {{< /alert >}}
 
 
@@ -122,6 +122,7 @@ type: docs
   <blockquote style="margin: 0 0 1em 0; font-size: 0.97em; color: #222; border-left: 3px solid #1976d2; padding-left: 1em;">
     Luis Gasco, Hermenegildo Fabregat, Laura García-Sardiña, Paula Estrella, Daniel Deniz, Álvaro Rodrigo and Rabih Zbib. 2025. Overview of the TalentCLEF 2025: Skill and Job Title Intelligence for Human Capital Management. In International Conference of the Cross-Language Evaluation Forum for European Languages. Springer.  
     <a href="https://www.arxiv.org/abs/2507.13275" target="_blank">[View preprint on arXiv]</a>
+    <a href="https://link.springer.com/chapter/10.1007/978-3-032-04354-2_24" target="_blank">[View Springer paper]</a>
   </blockquote>
 
   <div style="margin-bottom: 0.6em;">
@@ -132,9 +133,12 @@ type: docs
 @inproceedings{gasco2025overview,
   title={{Overview of the TalentCLEF 2025: Skill and Job Title Intelligence for Human Capital Management}},
   author={Gasco, Luis and Fabregat, Hermenegildo and Garc\'{\i}a-Sardi{\~n}a, Laura and Estrella, Paula and Deniz, Daniel and Rodrigo, \'{A}lvaro and Zbib, Rabih},
-  booktitle={{International Conference of the Cross-Language Evaluation Forum for European Languages}},
+  booktitle={{Experimental IR Meets Multilinguality, Multimodality, and Interaction}},
+  publisher={{Springer Nature Switzerland}},
+  address={{Cham}},
+  pages={{464--485}},
+  isbn={{978-3-032-04354-2}},
   year={2025},
-  publisher={Springer}
 }
     </pre>
     <button class="copy-btn2" type="button" style="margin-top:2px;">
@@ -160,7 +164,7 @@ type: docs
     <tr>
       <td>Iagox</td>
       <td class="talentclef-title">Semantic Matching of Jobs and Skills Using LLMs and S-BERT</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_376.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{beyondtitles2025,
   title={{Semantic Matching of Jobs and Skills Using LLMs and S-BERT}},
@@ -173,7 +177,7 @@ type: docs
     <tr>
       <td>DS@GT TalentCLEF</td>
       <td class="talentclef-title">Multilingual Job Title Matching with MPNet-Based Sentence Transformers</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_366.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{mpnetmatcher2025,
   title={{Multilingual Job Title Matching with MPNet-Based Sentence Transformers}},
@@ -186,7 +190,7 @@ type: docs
     <tr>
       <td>NLPnorth</td>
       <td class="talentclef-title">NLPnorth @ TalentCLEF 2025: Comparing Discriminative, Contrastive, and Prompt-Based Methods for Job Title and Skill Matching</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_377.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{nlpnorth2025,
   title={{NLPnorth @ TalentCLEF 2025: Comparing Discriminative, Contrastive, and Prompt-Based Methods for Job Title and Skill Matching}},
@@ -199,7 +203,7 @@ type: docs
     <tr>
       <td>UDII-UPM</td>
       <td class="talentclef-title">UDII-UPM at TalentCLEF 2025: Task A-Multilingual Job Title Matching</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_373.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{udiiupm2025,
   title={{UDII-UPM at TalentCLEF 2025: Task A-Multilingual Job Title Matching}},
@@ -212,7 +216,7 @@ type: docs
     <tr>
       <td>moali</td>
       <td class="talentclef-title">Enhancing Job-Skill Matching with LLM-Driven Data Augmentation and Fine-Tuned Bi-Encoders</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_363.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{llmdaug2025,
   title={{Enhancing Job-Skill Matching with LLM-Driven Data Augmentation and Fine-Tuned Bi-Encoders}},
@@ -225,7 +229,7 @@ type: docs
     <tr>
       <td>NT</td>
       <td class="talentclef-title">NT Team at Multilingual Job Title Matching Task A: Job Matching via Large Language Model-Based Description Generation and Retrieval</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_370.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{ntteam2025,
   title={{NT Team at Multilingual Job Title Matching Task A: Job Matching via Large Language Model-Based Description Generation and Retrieval}},
@@ -238,7 +242,7 @@ type: docs
     <tr>
       <td>SCaLAR</td>
       <td class="talentclef-title">Fine-Tuned Sentence Transformer for Multilingual Job Title Matching</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_365.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{finetunedst2025,
   title={{Fine-Tuned Sentence Transformer for Multilingual Job Title Matching}},
@@ -251,7 +255,7 @@ type: docs
     <tr>
       <td>AlexU-NLP</td>
       <td class="talentclef-title">AlexU-NLP at TalentCLEF 2025: Curriculum-Driven Hybrid Retrieval for Multilingual Job Title Matching</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_364.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{alexunlp2025,
   title={{AlexU-NLP at TalentCLEF 2025: Curriculum-Driven Hybrid Retrieval for Multilingual Job Title Matching}},
@@ -264,7 +268,7 @@ type: docs
     <tr>
       <td>SkillSeekers</td>
       <td class="talentclef-title">Enhancing Human Capital Management: AI Techniques for Candidate Matching and Skill Extraction</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_371.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{humancapitalai2025,
   title={{Enhancing Human Capital Management: AI Techniques for Candidate Matching and Skill Extraction}},
@@ -277,7 +281,7 @@ type: docs
     <tr>
       <td>HULAT-UC3M</td>
       <td class="talentclef-title">HULAT-UC3M at TalentCLEF: ArtificialIntelligence and Natural Language Processing applied to HR Management</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_374.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{hulatuc3m2025,
   title={{HULAT-UC3M at TalentCLEF: ArtificialIntelligence and Natural Language Processing applied to HR Management}},
@@ -290,10 +294,10 @@ type: docs
     <tr>
       <td>COTECMAR–UTB</td>
       <td class="talentclef-title">Linking Job Titles and ESCO Skills with Sentence Transformer Embeddings</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_368.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{cotecmarutb2025,
-  title={{Linking Job Titles and ESCO Skills with Sentence Transformer Embeddings}},
+  title={{COTECMAR--UTB at TalentCLEF 2025: Linking Job Titles and ESCO Skills with Sentence Transformer Embeddings}},
   author={Jhonattan Llamas, Edwin Puertas, Jairo Serrano and Juan Martinez},
   booktitle={{CLEF (Working Notes)}},
   year={2025}
@@ -303,7 +307,7 @@ type: docs
     <tr>
       <td>Ixa</td>
       <td class="talentclef-title">A Two-Stage Multilingual Job Title Matching System: Combining Expert Knowledge and LLM-based Ranking</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_372.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{expertrank2025,
   title={{A Two-Stage Multilingual Job Title Matching System: Combining Expert Knowledge and LLM-based Ranking}},
@@ -316,7 +320,7 @@ type: docs
     <tr>
       <td>pjmathematician</td>
       <td class="talentclef-title">pjmathematician at TalentCLEF 2025: Enhancing Job Title and Skill Matching with GISTEmbed and LLM-Augmented Data</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_375.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{pjmathematician2025,
   title={{pjmathematician at TalentCLEF 2025: Enhancing Job Title and Skill Matching with GISTEmbed and LLM-Augmented Data}},
@@ -328,11 +332,11 @@ type: docs
     </tr>
     <tr>
       <td>TechWolf</td>
-      <td class="talentclef-title">TechWolf at TalentCLEF 2025: Multilingual JobBERT-V2 for Cross-Lingual Job Title Matching</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-title">Multilingual JobBERT for Cross-Lingual Job Title Matching</td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_367.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{techwolf2025,
-  title={{TechWolf at TalentCLEF 2025: Multilingual JobBERT-V2 for Cross-Lingual Job Title Matching}},
+  title={{Multilingual JobBERT for Cross-Lingual Job Title Matching}},
   author={Jens-Joris Decorte, Matthias De Lange and Jeroen Van Hautte},
   booktitle={{CLEF (Working Notes)}},
   year={2025}
@@ -342,7 +346,7 @@ type: docs
     <tr>
       <td>VerbaNexAI</td>
       <td class="talentclef-title">VerbaNex at TalentCLEF2025: Semantic Matching of Multilingual Job Titles through a Framework Integrating ESCO Taxonomy</td>
-      <td class="talentclef-link"><a href="#" target="_blank">Link</a></td>
+      <td class="talentclef-link"><a href="https://ceur-ws.org/Vol-4038/paper_369.pdf" target="_blank">Link</a></td>
       <td>
         <button class="copy-btn" data-bibtex="@inproceedings{verbanex2025,
   title={{VerbaNex at TalentCLEF2025: Semantic Matching of Multilingual Job Titles through a Framework Integrating ESCO Taxonomy}},

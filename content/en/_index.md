@@ -30,6 +30,9 @@ exclude_search: true
   <a class="btn btn-lg custom-btn-yellow me-3 mb-4" href='{{< relref "docs/talentclef-2025/workshop/" >}}'>
     Info. about the TalentCLEF 2025 Workshop <i class="fas fa-globe ms-2"></i>
   </a>
+  <a class="btn btn-lg custom-btn-yellow me-3 mb-4" href='{{< relref "docs" >}}'>
+    Info. about the 2026 Task <i class="fas fa-trophy ms-2"></i>
+  </a>
 </div>
 
 

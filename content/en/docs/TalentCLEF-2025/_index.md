@@ -5,7 +5,7 @@ manualLinkRelref: "motivation"
 menu:
   main:
     parent: "The task"
-    weight: 1
+    weight: 3
 ---
 
 <meta http-equiv="refresh" content="0; url=/motivation/" />
