@@ -2,6 +2,9 @@
 title: ""
 linkTitle: "TalentCLEF-2026"
 manualLinkRelref: "motivation"
+weight: 10
+collapsible: true
+expanded: true
 menu:
   main:
     parent: "The task"
