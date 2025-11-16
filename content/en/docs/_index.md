@@ -7,7 +7,7 @@ menu:
 ---
 
 {{< alert color="warning" title="Info." >}}
-<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2026 is already release!
+<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2026 is already release! You can download it from [here](https://doi.org/10.5281/zenodo.17625261).
  {{< /alert >}}
 
 
