@@ -64,6 +64,11 @@ resources:
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
+          footer="**Casimiro Pío Carrino** <br> Avature, Spain">}}
+          <img src="casimiro_pio_carrino.png" alt="Madrid Gran Via" class="full-width-image">
+{{< /card >}}
+
+{{< card header="" title="" subtitle=""
           footer="**Alvaro Rodrigo, PhD.** <br> UNED, Spain">}}
           <img src="alvaro_rodrigo.png" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
@@ -72,9 +77,6 @@ resources:
           <img src="rabih.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
-{{< card class="placeholder" header="" title="" subtitle="" 
-          footer="">}}
-{{< /card >}}
 {{< /cardpane >}}
 
 

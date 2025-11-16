@@ -17,8 +17,8 @@ description: >
 
 | Status | Date                            | Event                                                       | Link |
 |--------|---------------------------------|-------------------------------------------------------------|------|
-|        | 17th November 2025               | Sample set  release                                    | [Link](https://doi.org/10.5281/zenodo.17625261) |
-|        |  17th November 2025              | Registration opens                                           | [Link](https://clef2026.clef-initiative.eu/) |
+|<div style="text-align: center; color: green;">&#10004;</div> | 17th November 2025               | Sample set  release                                    | [Link](https://doi.org/10.5281/zenodo.17625261) |
+|<div style="text-align: center; color: green;">&#10004;</div> |  17th November 2025              | Registration opens                                           | [Link](https://clef2026.clef-initiative.eu/) |
 |        | 26th January 2026               | Development Data Release for Task A                    |  |
 |        | 2nd February 2026              | Training Data Release for Task B     |  |
 |        | 16th February 2026                 | Development Data Release for Task B    |  | 
