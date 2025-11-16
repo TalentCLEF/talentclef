@@ -33,6 +33,13 @@ exclude_search: true
             display: block;
             margin: 0 auto;
         }
+        #imagecol_techwolf {
+            width: 100%;
+            max-width: 300px; /* Ajusta el tamaño máximo de la imagen */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
         .column2 .text-bold {
             font-weight: bold;
             margin-top: 10px;
@@ -133,9 +140,15 @@ TalentCLEF is organized by:
         </div>
         <div class="column2">
             <a href="https://www.uned.es/">
+              <img src="images/techwolf.png" alt="TechWolf Logo" id="imagecol_techwolf">
+            </a>
+        </div>
+        <div class="column2">
+            <a href="https://www.uned.es/">
               <img src="images/uned.png" alt="UNED Logo" id="imagecol_uned">
             </a>
         </div>
+        
 </div>
 
 {{% /blocks/section %}}

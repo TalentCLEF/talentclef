@@ -59,4 +59,16 @@ tags: [test, sample, docs]
 
 {{< alert color="warning" >}}We take the legal and ethical implications of using AI in Human Resources very seriously. It is important to note that the data we utilize inherently excludes any personal information, focusing solely on job titles and skills without involving personal/company information or geographic location.{{< /alert >}}
 
+
 The data will be hosted on the Zenodo platform under the [*NLP in HR*](https://zenodo.org/communities/nlp_hr/records?q=&l=list&p=1&s=10) community, following the file structure outlined below. Each time new data is added, an updated version of the dataset will be published on the platform. 
+ <br> 
+<body>
+    <a href="https://doi.org/10.5281/zenodo.17625261" class="download-button" target="_blank">Access the Zenodo download page</a>
+    <br> 
+</body>
+
+<br>  
+ 
+The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and TaskB, each containing training, validation and test folders to suuport different stages of model development. Until the official release of the full training set, users can access a sample version of the data through the `sampleset_TaskA.zip` and `sampleset_TaskB.zip` files.
+
+This sample dataset provides an example of the data format and structure that will be used in the task, serving as a preview of the full dataset to be released.

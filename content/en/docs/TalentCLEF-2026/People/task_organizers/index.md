@@ -9,8 +9,23 @@ tags: [test, sample, docs]
 resources:
   - src: "***.{png,jpg}"
 
-
 ---
+
+<style>
+.full-width-image {
+  width: 100%;
+  height: 50px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.placeholder {
+  visibility: hidden;
+}
+</style>
+
+## Task A
 
 {{< cardpane >}}
 
@@ -57,7 +72,34 @@ resources:
           <img src="rabih.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
+{{< card class="placeholder" header="" title="" subtitle="" 
+          footer="">}}
+{{< /card >}}
 {{< /cardpane >}}
 
 
+## Task B
 
+{{< cardpane >}}
+
+{{< card header="" title="" subtitle=""
+          footer="[**Jens-Joris Decorte**](https://jensjoris.be/) <br> TechWolf">}}
+          <img src="jensjorisdecorte.jpeg" alt="Jens-Joris Decorte" class="full-width-image">
+{{< /card >}}
+
+
+{{< card header="" title="" subtitle=""
+          footer="[**Matthias De Lange, PhD.**](https://mattdl.github.io/) <br> TechWolf">}}
+          <img src="matthiasdelange.jpeg" alt="Matthias De Lange" class="full-width-image">
+{{< /card >}}
+
+
+{{< card  title="" subtitle=""
+          footer="[**Luis Gascó, PhD.**](https://luisgasco.es/) <br> Avature, Spain">}}
+          <img src="luisgasco.png" alt="Luis Gascó" class="full-width-image">
+{{< /card >}}
+
+{{< card class="placeholder" header="" title="" subtitle="" 
+          footer="">}}
+{{< /card >}}
+{{< /cardpane >}}

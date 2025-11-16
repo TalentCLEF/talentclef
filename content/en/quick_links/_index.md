@@ -20,17 +20,17 @@ Links to TalentCLEF related resources:
   </div>
 {{< /card >}}
 
-{{< card header="**CLEF 2025**">}}
+{{< card header="**CLEF 2026**">}}
 <div style="text-align:center">
- <a href="http://clef2025.clef-initiative.eu/" target="_blank" >
+ <a href="https://clef2026.clef-initiative.eu/" target="_blank" >
   <img src="clef-logo.png" alt="CLEF Logo" style="width: 100px; height: auto;">
     </br>
-    CLEF 2025 website
+    CLEF 2026 website
   </a>
 </div>
 {{< /card >}}
 
-{{< card header="**TalentCLEF 2025 schedule**">}}
+{{< card header="**TalentCLEF 2026 schedule**">}}
 <div style="text-align:center">
  <a href='{{< relref "docs" >}}' target="_blank">
     </br>
@@ -42,12 +42,12 @@ Links to TalentCLEF related resources:
 {{< /cardpane>}}
 
 {{< cardpane>}}
-{{< card header="**TalentCLEF 2025 Corpora**">}}
+{{< card header="**TalentCLEF 2026 Corpora**">}}
 <div style="text-align:center">
- <a href='https://doi.org/10.5281/zenodo.14002665' target="_blank">
+ <a href='https://doi.org/10.5281/zenodo.17625261' target="_blank">
     <img src="zenodo.png" alt="GitHub Logo" style="width: 150px; height: auto;">
     </br>
-    TalentCLEF 2025 Corpora
+    TalentCLEF 2026 Corpora
   </a>
 </div>
 {{< /card >}}
