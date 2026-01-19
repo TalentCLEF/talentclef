@@ -42,9 +42,9 @@ The TalentCLEF 2026 task is structured into two independent sub-tasks, each taki
 
 **Data**: More information about data will be shown in <a  href='{{< relref "docs/talentclef-2026/data/description_corpus" >}}'> Data section</a>, but essentially we will provide: 
 
-- *Training set*: A training set of at least 5.000 job titles along with the professional skills required for each position will be provided. This data is sourced from actual job descriptions and semi-automatically curated to ensure high accuracy in the training set.
+- *Training set*: A training set of at least 5.000 job titles along with the professional skills required for each position will be provided. 
 
-- *Development set*: he development set will consist of 200 job titles along with their related skills, normalized to ESCO terminology. The data will include a new annotation layer indicating the relevance of each skill for the job position, specifying whether the skill is considered core to that job, complementary, or transversal across many jobs.
+- *Development set*: The development set will consist of 200 job titles along with their related skills, normalized to ESCO terminology. The data will include a new annotation layer indicating the relevance of each skill for the job position, specifying whether the skill is considered core or contextual. Core skills are those required to perform a specific job independently of the work context or employer and can thus be seen as essential for the position, whereas contextual skills depend on factors such as the organization or industry and can therefore be seen as optional.
 
 - *Test set*: The test set comprises a list of 500 job titles. The participants will be required to predict the related skills using the provided gazetteer, but also the skill type classification.
 
