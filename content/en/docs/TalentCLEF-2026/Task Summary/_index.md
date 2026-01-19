@@ -9,7 +9,7 @@ resources:
 
 <style>
 .full-width-image {
-            width: 90%;
+            width: 80%;
             height: auto; /* Maintains the aspect ratio */
         }
 </style>
