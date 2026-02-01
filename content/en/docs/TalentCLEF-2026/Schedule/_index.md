@@ -7,8 +7,7 @@ description: >
 ---
 
 
-{{< alert color="warning" title="Info." >}}
-<i class="fas fa-exclamation-triangle"></i> The <strong>development set for Task A and the <strong>training set for Task B</strong> of <strong>TalentCLEF 2026</strong> are now available! You can download the datasets from [here](https://doi.org/10.5281/zenodo.17625261).
+{{< alert color="warning" title="Info." >}}<i class="fas fa-exclamation-triangle"></i> The <strong>development set for Task A</strong>  and the <strong>training set for Task B</strong> of <strong>TalentCLEF 2026</strong> are now available! You can download the datasets from [here](https://doi.org/10.5281/zenodo.17625261).
  {{< /alert >}}
 
 
