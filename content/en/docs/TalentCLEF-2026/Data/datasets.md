@@ -69,6 +69,99 @@ The data will be hosted on the Zenodo platform under the [*NLP in HR*](https://z
 
 <br>  
  
-The dataset structure on Zenodo is organized into two `*.zip` files, TaskA and TaskB, each containing training, validation and test folders to suuport different stages of model development. Until the official release of the full training set, users can access a sample version of the data through the `sampleset_TaskA.zip` and `sampleset_TaskB.zip` files.
+The dataset structure on Zenodo is organized into two `*.zip` files, TaskA.zip and TaskB.zip, each containing folders to support different stages of model development. So far, only the development set of Task A and the training set of Task A have been released, but in future releases, as the tasks progress, additional data will be added to the different subfolders for each task.
 
-This sample dataset provides an example of the data format and structure that will be used in the task, serving as a preview of the full dataset to be released.
+**TaskA** includes language-specific subfolders within the directories, covering English and Spanish data. Development folders include two essential folders (queries, corpus), and a qrels file for evaluating model relevance to search queries.
+
+<body>
+    <ul>
+    <li class="line">
+<li class="line">
+            <span class="compressed-folder">🗜️️</span> TaskA
+            <ul class="subfolder">
+                <!-- Task A folder -->
+                <li class="line">
+                    <ul class="subfolder">
+                        <!-- Task A / Development -->
+                        <li class="line">
+                            <span class="folder">📁</span> development
+                            <ul class="subfolder">
+                                <li class="line"><span class="folder">📁</span> english
+                                    <ul class="subfolder">
+                                        <li class="line"><span class="folder">📁</span> queries
+                                            <ul class="subfolder">
+                                                <li><span class="file">📄</span> 1234</li>
+                                                <li>...</li>
+                                            </ul>
+                                        </li>
+                                        <li class="line"><span class="folder">📁</span> corpus
+                                            <ul class="subfolder">
+                                                <li><span class="file">📄</span> 1</li>
+                                                <li>...</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="file">📄</span> qrels.tsv</li>
+                                    </ul>
+                                </li>
+                                <li class="line"><span class="folder">📁</span> spanish
+                                    <ul class="subfolder">
+                                        <li class="line"><span class="folder">📁</span> queries
+                                            <ul class="subfolder">
+                                                <li><span class="file">📄</span> 9865</li>
+                                                <li>...</li>
+                                            </ul>
+                                        </li>
+                                        <li class="line"><span class="folder">📁</span> corpus
+                                            <ul class="subfolder">
+                                                <li><span class="file">📄</span> 2</li>
+                                                <li>...</li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="file">📄</span> qrels.tsv</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Task A / Test -->
+                        <li class="line">
+                            <span class="folder">📁</span> test
+                        </li>
+                    </ul>
+                </li>
+    </li>
+</body>
+
+ <br> 
+
+**TaskB** follows a similar structure but without language-specific subfolders, providing general .tsv files for training, validation, and testing. This consistent file organization enables efficient data access and structured updates as new data versions are published.
+
+<body>
+    <ul>
+        <!-- Root folder -->
+                <!-- Task B folder -->
+                <li class="line">
+                <span class="compressed-folder">🗜️️</span> TaskB
+                    <ul class="subfolder">
+                        <!-- Task B / Training -->
+                        <li class="line">
+                            <span class="folder">📁</span> training
+                            <ul class="subfolder">
+                                <li><span class="file">📄</span> job2skill.tsv</li>
+                                <li><span class="file">📄</span> jobid2terms.json</li>
+                                <li><span class="file">📄</span> skillid2terms.json</li>
+                            </ul>
+                        </li>
+                        <!-- Task B / Validation -->
+                        <li class="line">
+                            <span class="folder">📁</span> validation
+                        </li>
+                        <!-- Task B / Test -->
+                        <li class="line">
+                            <span class="folder">📁</span> test
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
