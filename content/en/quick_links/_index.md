@@ -59,6 +59,16 @@ Links to TalentCLEF related resources:
 
 <div class="d-flex justify-content-center">
 {{< cardpane>}}
+{{< card header="**TalentCLEF 2026 Evaluation Script**">}}
+<div style="text-align:center">
+ <a href='https://github.com/TalentCLEF/talentclef26_evaluation_script' target="_blank">
+    <img src="github.png" alt="GitHub Logo" style="width: 100px; height: auto;">
+    </br>
+    TalentCLEF 2025 Evaluation Script
+  </a>
+</div>
+{{< /card >}}
+
 {{< card header="**TalentCLEF Task A - Codabench**">}}
 <div style="text-align:center">
   <a href="https://www.codabench.org/competitions/5842" target="_blank" >
@@ -79,15 +89,7 @@ Links to TalentCLEF related resources:
 </div>
 {{< /card >}}
 
-{{< card header="**TalentCLEF 2025 Evaluation Script**">}}
-<div style="text-align:center">
- <a href='https://github.com/TalentCLEF/talentclef25_evaluation_script' target="_blank">
-    <img src="github.png" alt="GitHub Logo" style="width: 100px; height: auto;">
-    </br>
-    TalentCLEF 2025 Evaluation Script
-  </a>
-</div>
-{{< /card >}}
+
 
 {{< /cardpane>}}
 

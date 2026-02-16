@@ -19,6 +19,7 @@ type: docs
 
 The evaluation for TalentCLEF-2026 will be conducted on **Codabench**. Submissions will be ranked using Mean Average Precision (MAP) and nDCG (normalized Discounted Cumulative Gain).
 
+For local testing, an evaluation script is available in our GitHub repository. You can access it here: [Evaluation Script](https://github.com/TalentCLEF/talentclef26_evaluation_script). You can find a tutorial on the process of generating submission files and evaluating them in the Tutorials section of the [*Additional resources page*](https://talentclef.github.io/talentclef/docs/talentclef-2026/data/additional_resources/#3-tutorials)
 
 
 {.text-center .display-7}
