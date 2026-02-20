@@ -119,6 +119,66 @@ For example, a <strong>software engineer</strong> may be required to <em>develop
 
 2. **Validation Set**:
 
+    The validation set is divided into three different files: queries, corpus elements and q_rels:
+
+    - **Queries**: Contains the following fields:
+        - *q_id*: A unique identifier for the query.
+        - *jobtitle*: The job title used as the query.
+
+    - **Corpus Elements**: Contains:
+        - *c_id*: A unique identifier for each corpus element.
+        - *esco_uri*: The ESCO URIs associated to c_id.
+        - *skill_aliases*: The list aliases of the ESCO skill.
+
+    - **q_rels**: This file maps the relationship between the query and the corpus elements:
+        - *q_id*: The identifier of the query.
+        - *iter*: A reserved field (always 0).
+        - *c_id*: The identifier of the corresponding corpus element.
+        - *relevance*: A binary score (0, 1 or 2) indicating the relevance of the corpus element to the query, where **2 signifies Core Skill**, **1 signifies Contextual skill** and **0 non-relevant**.
+    
+    Example of the content of these files:
+
+    <div style="display: flex; gap: 20px;">
+
+    <div style="flex: 1;">
+
+    #### queries
+    | q_id | jobtitle |
+    |------|----------|
+    | dev_qb_jt_64 | senior sw engineer |
+
+    </div>
+
+    <div style="flex: 1;">
+
+    #### corpus_elements
+    | c_id | esco_uri | skill_aliases |
+    |------|----------|---------------|
+    | dev_cb_sk_320 | http://data.europa.eu/esco/skill/54924a2c-daca-40d3-9716-4b38ceb04f38 | ['algorithms', 'algorithmic', 'algorithm', 'formulae', 'formulas'] |
+    | dev_cb_sk_324 | http://data.europa.eu/esco/skill/2857540c-180b-4208-9127-e94a01871966 | ['align software with system architectures'] |
+    | dev_cb_sk_409 | http://data.europa.eu/esco/skill/f28617ad-afdd-4041-814c-216153a38998 | ['analyse software specifications', 'evaluate software design specification', 'examine software requirements', ...] |
+    | dev_cb_sk_1517 | http://data.europa.eu/esco/skill/21d2f96d-35f7-4e3f-9745-c533d2dd6e97 | ['computer programming', 'DIBOL', 'Seed7', 'Visual Basic .NET', 'HyperTalk', 'Korn-shell', ...] |
+    | dev_cb_sk_316 | http://data.europa.eu/esco/skill/8c88d336-c249-4537-b26e-d679a85c4b9b | ['Ajax Framework'] |
+    | dev_cb_sk_333 | http://data.europa.eu/esco/skill/47a49cd6-097d-457a-9f7b-c290c14930d5 | ['analyse big data', 'analysing big data', 'search big data', 'big data analysing', 'scrutinise big data', 'test big data', ...] |
+
+    </div>
+
+    <div style="flex: 1;">
+
+    #### qrels
+    | q_id | iter | c_id | relevance |
+    |------|------|------|-----------|
+    | dev_qb_jt_64 | 0 | dev_cb_sk_320 | 2 |
+    | dev_qb_jt_64 | 0 | dev_cb_sk_324 | 2 |
+    | dev_qb_jt_64 | 0 | dev_cb_sk_409 | 2 |
+    | dev_qb_jt_64 | 0 | dev_cb_sk_1517 | 2 |
+    | dev_qb_jt_64 | 0 | dev_cb_sk_316 | 1 |
+    | dev_qb_jt_64 | 0 | dev_cb_sk_333 | 1 |
+
+    </div>
+
+    </div>
+
 3. **Test Set**:
 
 </details>

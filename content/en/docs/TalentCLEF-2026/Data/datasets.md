@@ -154,6 +154,11 @@ The dataset structure on Zenodo is organized into two `*.zip` files, TaskA.zip a
                         <!-- Task B / Validation -->
                         <li class="line">
                             <span class="folder">📁</span> validation
+                            <ul class="subfolder">
+                                <li><span class="file">📄</span> queries</li>
+                                <li><span class="file">📄</span> corpus_elements</li>
+                                <li><span class="file">📄</span> q_rels</li>
+                            </ul>
                         </li>
                         <!-- Task B / Test -->
                         <li class="line">

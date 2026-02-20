@@ -59,12 +59,12 @@ resources:
 
 
 {{< card header="" title="" subtitle=""
-          footer="**Paula Estrella** <br> Avature, Spain">}}
+          footer="**Paula Estrella** <br> Avature">}}
           <img src="paula_estrella.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
-          footer="**Casimiro Pío Carrino** <br> Avature, Spain">}}
+          footer="**Casimiro Pío Carrino** <br> Avature">}}
           <img src="casimiro_pio_carrino.png" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
@@ -73,7 +73,7 @@ resources:
           <img src="alvaro_rodrigo.png" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 {{< card header="" title="" subtitle=""
-          footer="**Rabih Zbib, PhD.** <br> Avature, Spain">}}
+          footer="**Rabih Zbib, PhD.** <br> Avature">}}
           <img src="rabih.jpg" alt="Madrid Gran Via" class="full-width-image">
 {{< /card >}}
 
@@ -97,11 +97,15 @@ resources:
 
 
 {{< card  title="" subtitle=""
-          footer="[**Luis Gascó, PhD.**](https://luisgasco.es/) <br> Avature, Spain">}}
+          footer="[**Warre Veys**](https://luisgasco.es/) <br> TechWolf">}}
+          <img src="warre_veys.jpeg" alt="Warre Veys" class="full-width-image">
+{{< /card >}}
+
+
+{{< card  title="" subtitle=""
+          footer="[**Luis Gascó, PhD.**](https://luisgasco.es/) <br> Avature">}}
           <img src="luisgasco.png" alt="Luis Gascó" class="full-width-image">
 {{< /card >}}
 
-{{< card class="placeholder" header="" title="" subtitle="" 
-          footer="">}}
-{{< /card >}}
+
 {{< /cardpane >}}
