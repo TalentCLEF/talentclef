@@ -29,7 +29,7 @@ For local testing, an evaluation script is available in our GitHub repository. Y
 {{< cardpane>}}
 {{< card header="**TalentCLEF Task A - Codabench**">}}
 <div style="text-align:center">
-  <a href="" target="_blank" >
+  <a href="https://www.codabench.org/competitions/14226/" target="_blank" >
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" class="full-width-image">
     </br>
   </a>
@@ -53,6 +53,7 @@ For local testing, an evaluation script is available in our GitHub repository. Y
 ### Evaluation dates 
 
 #### Task A: 
+- **Codabench**: [Link](https://www.codabench.org/competitions/14226/)
 - **Start Date**: 13st April 2026
 - **End Date**: 3rd May 2026
 
@@ -61,4 +62,17 @@ For local testing, an evaluation script is available in our GitHub repository. Y
 - **Start Date**: 13st April 2026
 - **End Date**: 3rd May 2026
 
+
+### Evaluation Criteria
+
+The top-performing teams will be determined based on the following evaluation criteria:
+
+1. **Task A**:
+    - **Best Overall Multilingual Performance** – The highest-performing system across English and Spanish, measured as the average Mean Average Precision (MAP) in `en-en` and `es-es`.
+    - **Best Cross-Lingual Performance** – The best-performing system in cross-lingual scenarios, calculated as the MAP in `en-es`.
+    - **Best Bias-Controlled Model** – The system that minimizes performance differences across different gender groups.
+    
+    During the CLEF workshop, certificates will be awarded to the first and second-best systems in each category.
+
+2. **Task B**:  The highest-performing system based on NDCG.
 

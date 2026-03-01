@@ -20,7 +20,8 @@ menu:
 |<div style="text-align: center; color: green;">&#10004;</div> | <s>26th January 2026</s> 2nd February 2026             | Development Data Release for Task A                    | [Link](https://doi.org/10.5281/zenodo.17625261) | |
 |<div style="text-align: center; color: green;">&#10004;</div> | 2nd February 2026              | Training Data Release for Task B     |[Link](https://doi.org/10.5281/zenodo.17625261) |  |
 |<div style="text-align: center; color: green;">&#10004;</div>| <s>16th February 2026</s> 24th February 2026                 | Development Data Release for Task B    | [Link](https://doi.org/10.5281/zenodo.17625261) | 
-|        | 2nd March 2026                 | Codabench Release for Task A and Task B    |  | 
+|<div style="text-align: center; color: green;">&#10004;</div>| 2nd March 2026                 | Codabench Release for Task A   | [Link](https://www.codabench.org/competitions/14226/) | 
+| | 9th March 2026                 | Codabench Release for Task B   |  | 
 |        | 13th April - 3rd May 2026       | Evaluation period of Task A             |  | 
 |        | 13th April - 3rd May 2026       | Evaluation period of Task B             |  | 
 |        | 11th May 2025                    | Send Task A and B Results to participants                           |  | 

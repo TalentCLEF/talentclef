@@ -64,27 +64,27 @@ Links to TalentCLEF related resources:
  <a href='https://github.com/TalentCLEF/talentclef26_evaluation_script' target="_blank">
     <img src="github.png" alt="GitHub Logo" style="width: 100px; height: auto;">
     </br>
-    TalentCLEF 2025 Evaluation Script
+    TalentCLEF 2026 Evaluation Script
   </a>
 </div>
 {{< /card >}}
 
-{{< card header="**TalentCLEF Task A - Codabench**">}}
+{{< card header="**TalentCLEF 2026: Task A - Codabench**">}}
 <div style="text-align:center">
-  <a href="https://www.codabench.org/competitions/5842" target="_blank" >
+  <a href="https://www.codabench.org/competitions/14226" target="_blank" >
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" style="width: 200px; height: auto;">
     </br>
-    TalentCLEF 2025 Task A CodaBench
+    TalentCLEF 2026 Task A CodaBench
   </a>
   </div>
 {{< /card >}}
 
-{{< card header="**TalentCLEF Task B - Codabench**">}}
+{{< card header="**TalentCLEF 2026: Task B - Codabench**">}}
 <div style="text-align:center">
- <a href="https://www.codabench.org/competitions/7059" target="_blank" >
+ <a href="" target="_blank" >
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" style="width: 200px; height: auto;">
     </br>
-    TalentCLEF 2025 Task B CodaBench
+    TalentCLEF 2026 Task B CodaBench (To be Published)
   </a>
 </div>
 {{< /card >}}
