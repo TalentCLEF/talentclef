@@ -1,5 +1,5 @@
 ---
-title: Evaluation info
+title: Submission format
 date: 2026-01-05
 categories: [Examples]
 weight: 3
@@ -15,8 +15,6 @@ type: docs
 {{< alert color="warning" >}}<i class="fas fa-exclamation-triangle"></i> You can find a tutorial on the process of generating submission files and evaluating them in the Tutorials section of the [*Additional resources page*](https://talentclef.github.io/talentclef/docs/talentclef-2026/data/additional_resources/#3-tutorials)
 {{< /alert >}}
 
-
-## Task A
 Submissions must adhere to the TREC Run File Format, including column names, with exactly six space-separated columns per line, structured as follows:
 
 ```
@@ -41,7 +39,3 @@ query1 Q0 ce1 1 0.6910377144813538 teamA_systemA
 query1 Q0 ce4 2 0.6690284013748169 teamA_systemA
 query1 Q0 ce5 3 0.662328839302063 teamA_systemA
 ```
-
-
-## Task B
-AVailable soon!

@@ -81,10 +81,10 @@ Links to TalentCLEF related resources:
 
 {{< card header="**TalentCLEF 2026: Task B - Codabench**">}}
 <div style="text-align:center">
- <a href="" target="_blank" >
+ <a href="https://www.codabench.org/competitions/14489" target="_blank" >
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" style="width: 200px; height: auto;">
     </br>
-    TalentCLEF 2026 Task B CodaBench (To be Published)
+    TalentCLEF 2026 Task B CodaBench
   </a>
 </div>
 {{< /card >}}

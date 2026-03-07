@@ -38,7 +38,7 @@ For local testing, an evaluation script is available in our GitHub repository. Y
 
 {{< card header="**TalentCLEF Task B - Codabench**">}}
 <div style="text-align:center">
- <a href="" target="_blank" >
+ <a href="https://www.codabench.org/competitions/14489" target="_blank" >
     <img src="https://miro.medium.com/v2/resize:fit:1400/1*cIZRfXOzzSobTkTV4i6gVA.png" alt="Codabench" class="full-width-image">
     </br>
   </a>
@@ -59,6 +59,7 @@ For local testing, an evaluation script is available in our GitHub repository. Y
 
 
 #### Task B: 
+- **Codabench**: [Link](https://www.codabench.org/competitions/14489)
 - **Start Date**: 13st April 2026
 - **End Date**: 3rd May 2026
 
@@ -74,5 +75,11 @@ The top-performing teams will be determined based on the following evaluation cr
     
     During the CLEF workshop, certificates will be awarded to the first and second-best systems in each category.
 
-2. **Task B**:  The highest-performing system based on NDCG.
+2. **Task B**: The highest-performing system based on Normalized Discounted Cumulative Gain (NDCG).
+    - **Graded Relevance** – Skills are weighted differently: core skills (weight = 2) and contextual skills (weight = 1). This approach distinguishes the importance of different skill types udring the evaluation.
+    - **Binary Relevance** – All relevant skills (both core and contextual) are treated equally with the same weight, without distinction.
+    - The **graded relevance NDCG** will be used to determine the top-performing team.
+    - Additional metrics may be reported in the overview paper.
+    
+    During the CLEF workshop, certificates will be awarded to the best-performing systems.
 

@@ -7,7 +7,7 @@ menu:
 ---
 
 {{< alert color="warning" title="Info." >}}
-<i class="fas fa-exclamation-triangle"></i> The <strong>Codabench platform for Task A</strong> of <strong>TalentCLEF 2026</strong> is now available! You can access the competition here: [Link](https://www.codabench.org/competitions/14226/)
+<i class="fas fa-exclamation-triangle"></i> The <strong>Codabench platforms</strong> for <strong>TalentCLEF 2026</strong> are now available!: [**Task A Codabench**](https://www.codabench.org/competitions/14226/) and [**Task B Codabench**](https://www.codabench.org/competitions/14489/)
 {{< /alert >}}
 
 
@@ -21,7 +21,7 @@ menu:
 |<div style="text-align: center; color: green;">&#10004;</div> | 2nd February 2026              | Training Data Release for Task B     |[Link](https://doi.org/10.5281/zenodo.17625261) |  |
 |<div style="text-align: center; color: green;">&#10004;</div>| <s>16th February 2026</s> 24th February 2026                 | Development Data Release for Task B    | [Link](https://doi.org/10.5281/zenodo.17625261) | 
 |<div style="text-align: center; color: green;">&#10004;</div>| 2nd March 2026                 | Codabench Release for Task A   | [Link](https://www.codabench.org/competitions/14226/) | 
-| | 9th March 2026                 | Codabench Release for Task B   |  | 
+|<div style="text-align: center; color: green;">&#10004;</div>| 9th March 2026                 | Codabench Release for Task B   | [Link](https://www.codabench.org/competitions/14489/) | 
 |        | 13th April - 3rd May 2026       | Evaluation period of Task A             |  | 
 |        | 13th April - 3rd May 2026       | Evaluation period of Task B             |  | 
 |        | 11th May 2025                    | Send Task A and B Results to participants                           |  | 
