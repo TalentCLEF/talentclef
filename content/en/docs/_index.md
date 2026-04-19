@@ -6,15 +6,17 @@ menu:
     weight: 20
 ---
 
+
 {{< alert color="warning" title="Info." >}}
 
 <i class="fas fa-exclamation-triangle"></i>
 <strong>Reminder:</strong> Don't forget to register in the lab through the [**CLEF team registration form**](https://clef-labs-registration.dipintra.it/) before <strong>23rd April 2026</strong>!
- The <strong>Codabench platforms</strong> for <strong>TalentCLEF 2026</strong> are now available!: [**Task A Codabench**](https://www.codabench.org/competitions/14226/) and [**Task B Codabench**](https://www.codabench.org/competitions/14489/)
 
+We are currently in the <strong>evaluation phase</strong> on Codabench: [**Task A Codabench**](https://www.codabench.org/competitions/14226/) and [**Task B Codabench**](https://www.codabench.org/competitions/14489/)
+
+The <strong>test set prediction data</strong> is now available on [**Zenodo**](https://doi.org/10.5281/zenodo.17625261).
 
 {{< /alert >}}
-
 ## TalentCLEF 2026 schedule 
 
 | Status | Date                            | Event                                                       | Link |
@@ -26,8 +28,9 @@ menu:
 |<div style="text-align: center; color: green;">&#10004;</div>| <s>16th February 2026</s> 24th February 2026                 | Development Data Release for Task B    | [Link](https://doi.org/10.5281/zenodo.17625261) | 
 |<div style="text-align: center; color: green;">&#10004;</div>| 2nd March 2026                 | Codabench Release for Task A   | [Link](https://www.codabench.org/competitions/14226/) | 
 |<div style="text-align: center; color: green;">&#10004;</div>| 9th March 2026                 | Codabench Release for Task B   | [Link](https://www.codabench.org/competitions/14489/) | 
-|        | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task A             |  | 
-|        | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task B             |  | 
+|<div style="text-align: center; color: green;">&#10004;</div>| 20th April 2026                 | Evaluation Data Release for Task A and B   | [Link](https://doi.org/10.5281/zenodo.17625261) | 
+| <div style="text-align: center; color: green;">&#10004;</div>    | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task A             | [Link](https://www.codabench.org/competitions/14226/)  | 
+|  <div style="text-align: center; color: green;">&#10004;</div>      | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task B             | [Link](https://www.codabench.org/competitions/14489/) | 
 |        | 11th May 2025                    | Send Task A and B Results to participants                           |  | 
 |        | 28th May 2026             | Submission of CLEF 2026 Working Notes (Tentative)             |  | 
 |        | June - July 2025       | Review of Labs Overviews (Tentative)                         |   | 

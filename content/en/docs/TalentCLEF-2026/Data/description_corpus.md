@@ -53,6 +53,12 @@ Synthetic documents were generated in English and then manually reviewed to ensu
 
 3. **Test Set**:
 
+    For each language (English and Spanish), the test set contains queries and corpus files used for evaluating participating teams. The participant can combine queries and corpus to generate the run_ files required for the task.
+
+    - **Queries**: A folder containing the job description files that act as queries. Each file is named with its unique identifier, and the file name serves as the `q_id` for that query.
+
+    - **Corpus**: A folder containing the résumé files. Each file is named with its unique identifier, and the file name serves as the `c_id` for that corpus document.
+
 </details>
 
 <details>
@@ -180,5 +186,11 @@ For example, a <strong>software engineer</strong> may be required to <em>develop
     </div>
 
 3. **Test Set**:
+
+    The test set contains queries and corpus files used for evaluating participating teams. Participants can combine queries and corpus to generate the run files required for the task.
+
+    - **Queries**: Contains 1139 job title queries. Each query has a unique identifier (`q_id`) and the corresponding job title.
+
+    - **Corpus**: Contains 5358 skill elements. Each corpus element has a unique identifier (`c_id`), the ESCO URI, and skill aliases as in the devleopment format.
 
 </details>
