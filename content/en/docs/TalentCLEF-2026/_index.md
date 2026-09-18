@@ -2,13 +2,9 @@
 title: ""
 linkTitle: "TalentCLEF-2026"
 manualLinkRelref: "motivation"
-weight: 10
+weight: 20
 collapsible: true
-expanded: true
-menu:
-  main:
-    parent: "The task"
-    weight: 10
+expanded: false
 ---
 
 <meta http-equiv="refresh" content="0; url=/motivation/" />

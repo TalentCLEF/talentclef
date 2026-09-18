@@ -3,7 +3,7 @@ title: "Workshop"
 weight: 8
 type: docs
 resources:
-  - src: "jena_background.png"  
+  - src: "jena_background.jpg"  
 ---
 <style>
 .full-width-image {
@@ -16,11 +16,20 @@ resources:
 
 TalentCLEF 2026 workshop will be held as part of the CLEF 2026 conference (Conference and Labs of the Evaluation Forum), scheduled for September in Jena, Germany.  
 
+### Important Links
+
+<div style="text-align: center; margin-top: 40px;">
+  <a href="/talentclef/docs/talentclef-2026/workshop/workshop_schedule" class="btn btn-primary btn-lg">View Schedule</a>
+  <a href="/talentclef/docs/talentclef-2026/workshop/keynote" class="btn btn-primary btn-lg">View Keynote Speaker</a>
+  <a href="/talentclef/docs/talentclef-2026/results/publications" class="btn btn-primary btn-lg">View Publications</a>
+</div>
+
+
 
 ### About the Workshop
 The TalentCLEF evaluation Lab will be a one-day event that will include several activities. There will be oral presentations of the best challenge solutions, keynote talks, a poster session for participants and a panel discussion. In order to boost participation, an awards ceremony will be held where diplomas will be awarded to the best performing teams. Below is a tentative schedule of the workshop activities.
 
-<a href="https://https://clef2026.clef-initiative.eu/">
+<a href="https://clef2026.clef-initiative.eu/">
 <img src="logo_clef_jena.svg" alt="Logo clef Jena" style="width: 150; height: auto;">
 </a>
 

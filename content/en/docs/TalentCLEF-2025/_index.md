@@ -2,7 +2,7 @@
 title: ""
 linkTitle: "TalentCLEF-2025"
 manualLinkRelref: "motivation"
-weight: 20
+weight: 30
 collapsible: true
 expanded: false
 ---
