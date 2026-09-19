@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/fixedcolumns/4.3.0/css/fixedColumns.dataTables.min.css">
+<style>
+
+    body { font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; background: #fff; color: #252525; margin: 0; padding: 0 0 24px 0; }
+    main { max-width: 100%; margin: 0; padding: 0; }
+    .note { color: #6b7280; font-size: 0.86rem; margin: 6px 2px 14px 2px; }
+    .chip { display: inline-block; font-size: 0.74rem; font-weight: 600; line-height: 1.5;
+            border-radius: 5px; padding: 1px 6px; margin: 1px 3px 1px 0; border: 1px solid; white-space: nowrap; }
+    .c-repr { background:#e7f6e7; border-color:#4a9a4a; color:#245c24; }
+    .c-meth { background:#e4f6f9; border-color:#2e9fb5; color:#14596a; }
+    .c-det  { background:#fdefdf; border-color:#d98b28; color:#7d4b08; }
+    .c-llm  { background:#f3e8f8; border-color:#9a53b8; color:#5a2a70; }
+    .c-bias { background:#e7edfa; border-color:#3f63b5; color:#22386d; }
+    .c-ext  { background:#f4ece5; border-color:#a5754a; color:#5e4227; }
+    .c-mod  { background:#f3f4f6; border-color:#9ca3af; color:#374151; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 500; }
+
+    #groups { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 12px 0; }
+    #groups button { padding: 6px 13px; border-radius: 20px; border: 1px solid #cfd7e3; background: #f8fafc;
+                     color: #374151; font-size: 0.84rem; font-weight: 600; cursor: pointer; }
+    #groups button.on { background: #145370; border-color: #145370; color: #fff; }
+    table.dataTable { border: 1px solid #e5e7eb; background: #fff; font-size: 0.86rem; }
+    table.dataTable thead th { white-space: nowrap; font-size: 0.78rem; }
+    table.dataTable td { vertical-align: top; }
+    td.metaCell { min-width: 190px; max-width: 330px; white-space: normal; }
+    .dtfc-fixed-left { background: #fff !important; }
+    .rank { font-weight: 700; color: #145370; }
+    .flagged { color: #b45309; font-weight: 600; }
+    .baseline td { background: #eef4fb !important; font-style: italic; }
+    .dataTables_wrapper .dataTables_filter input { border-radius: 7px; border: 1px solid #cfd7e3; padding: 5px 8px; }
+</style>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/fixedcolumns/4.3.0/js/dataTables.fixedColumns.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+<main>
+  <div id="groups"></div>
+  <table id="tbl" class="display" style="width:100%">
+    <thead><tr id="head"></tr></thead><tbody id="body"></tbody>
+  </table>
+  <p class="note">All 19 official runs. Use the buttons to show or hide column groups, and the search box to filter.
+     <a href="results_b.tsv" download>Download the full results as TSV</a>.</p>
+</main>
+<script>
+const TSV = "results_b.tsv";
+const GROUPS = [{"id": "core", "label": "Run", "cols": ["Rank", "Team", "run_ID", "Baseline", "ID errors"]}, {"id": "headline", "label": "Headline metrics", "cols": ["NDCG_graded", "NDCG_binary", "MAP_graded", "MAP_binary"]}, {"id": "allmetrics", "label": "All metrics", "cols": ["MRR_binary", "MRR_graded", "P@5_binary", "P@5_graded", "P@10_binary", "P@10_graded", "P@100_binary", "P@100_graded", "Models"]}, {"id": "meta", "label": "System description", "cols": ["Representation type", "Methodology", "System details", "LLM usage", "Bias mitigation", "External data"]}, {"id": "derived", "label": "Summary tags", "cols": ["Pipeline", "Representation", "LLM strategy", "Fine-tuned", "Uses external data", "Bias handling"]}];
+const CHIPCLASS = { "Representation type": "c-repr", "Methodology": "c-meth",
+  "System details": "c-det", "LLM usage": "c-llm", "Bias mitigation": "c-bias",
+  };
+const DROP = ["Models"];   // kept in the TSV, too long to render in-table
+let cols = [], table = null, active = ["core", "headline", "meta"];
+
+function render(col, val, row) {
+  if (val === undefined || val === null || val === "") return "";
+  if (col === "Rank") return "<span class='rank'>" + val + "</span>";
+  if (col === "ID errors") return val === "yes" ? "<span class='flagged'>&#9888; yes</span>" : "no";
+  if (CHIPCLASS[col]) {
+    return val.split(";").map(v => v.trim()).filter(Boolean)
+      .map(v => "<span class='chip " + CHIPCLASS[col] + "'>" + v + "</span>").join(" ");
+  }
+  return val;
+}
+function visible() {
+  const show = new Set();
+  GROUPS.forEach(g => { if (active.includes(g.id)) g.cols.forEach(c => show.add(c)); });
+  return show;
+}
+function apply() {
+  const show = visible();
+  cols.forEach((c, i) => table.column(i).visible(show.has(c), false));
+  table.columns.adjust().draw(false);
+  document.querySelectorAll("#groups button").forEach(b =>
+    b.classList.toggle("on", active.includes(b.dataset.id)));
+}
+fetch(TSV).then(r => r.text()).then(text => {
+  const rows = Papa.parse(text, { header: true, delimiter: "\t" }).data.filter(r => r.Team);
+  cols = Object.keys(rows[0]).filter(c => !DROP.includes(c));
+  document.getElementById("head").innerHTML = cols.map(c => "<th>" + c + "</th>").join("");
+  document.getElementById("body").innerHTML = rows.map(r =>
+    "<tr class='" + (r.Baseline === "yes" ? "baseline" : "") + "'>" +
+    cols.map(c => "<td class='" + (CHIPCLASS[c] ? "metaCell" : "") + "'>" +
+                  render(c, r[c], r) + "</td>").join("") + "</tr>").join("");
+  table = new DataTable("#tbl", {
+    paging: true, pageLength: 25, order: [], searching: true, info: true,
+    scrollX: true, fixedColumns: { left: 2 },
+    lengthMenu: [[10, 25, 50, -1], [10, 25, 50, "All"]]
+  });
+  const bar = document.getElementById("groups");
+  bar.innerHTML = GROUPS.map(g =>
+    "<button data-id='" + g.id + "'>" + g.label + "</button>").join("");
+  bar.querySelectorAll("button").forEach(b => b.addEventListener("click", () => {
+    const id = b.dataset.id;
+    active = active.includes(id) ? active.filter(x => x !== id) : active.concat([id]);
+    if (!active.includes("core")) active = ["core"].concat(active);
+    apply();
+  }));
+  apply();
+});
+</script>
+</body>
+</html>
