@@ -58,11 +58,11 @@ resources:
 
 ## Talk
 
-**Title — to be announced**
+**Fair Play in the Talent Market: Open Challenges in AI for Work and Lessons from FairMatch**
 
 ## Abstract
 
-*To be completed.*
+AI systems for job and career recommendation increasingly shape who sees which opportunities and who does not. In this talk, I'll briefly sketch the many application possibilities of AI for the labor market as well as the open challenges we still need to address. I will then spend the bulk of the talk on FairMatch, our collaboration with Jobindex, Denmark's largest job portal, where we build fair job and candidate recommendation algorithms deployed at scale. I will walk through the practical trade-offs of translating fairness definitions from the literature into production constraints, the evaluation challenges unique to a live job marketplace, and what this suggests for the next generation of AI systems operating in high-stakes labor markets.
 
 ## Short bio
 

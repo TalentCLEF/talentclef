@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+
+    body { font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; background: #fff; color: #252525; margin: 0; padding: 0 0 24px 0; }
+    main { max-width: 100%; margin: 0; padding: 0; }
+    .note { color: #6b7280; font-size: 0.86rem; margin: 6px 2px 14px 2px; }
+    .chip { display: inline-block; font-size: 0.74rem; font-weight: 600; line-height: 1.5;
+            border-radius: 5px; padding: 1px 6px; margin: 1px 3px 1px 0; border: 1px solid; white-space: nowrap; }
+    .c-repr { background:#e7f6e7; border-color:#4a9a4a; color:#245c24; }
+    .c-meth { background:#e4f6f9; border-color:#2e9fb5; color:#14596a; }
+    .c-det  { background:#fdefdf; border-color:#d98b28; color:#7d4b08; }
+    .c-llm  { background:#f3e8f8; border-color:#9a53b8; color:#5a2a70; }
+    .c-bias { background:#e7edfa; border-color:#3f63b5; color:#22386d; }
+    .c-ext  { background:#f4ece5; border-color:#a5754a; color:#5e4227; }
+    .c-mod  { background:#f3f4f6; border-color:#9ca3af; color:#374151; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 500; }
+
+    table.lb { width: 100%; border-collapse: separate; border-spacing: 0 6px; }
+    table.lb th { text-align: left; font-size: 0.82rem; text-transform: uppercase; letter-spacing: .04em;
+                  color: #4b5563; padding: 4px 10px; border-bottom: 2px solid #e5e7eb; }
+    table.lb td { background: #fff; padding: 10px; border-top: 1px solid #eef1f5; border-bottom: 1px solid #eef1f5; }
+    table.lb td:first-child { border-left: 1px solid #eef1f5; border-radius: 8px 0 0 8px; text-align: center;
+                              font-weight: 700; width: 58px; }
+    table.lb td:last-child { border-right: 1px solid #eef1f5; border-radius: 0 8px 8px 0; }
+    tr.r1 td { background: #fffaea; } tr.r1 td:first-child { box-shadow: inset 4px 0 0 #e0b529; }
+    tr.r2 td { background: #fafafa; } tr.r2 td:first-child { box-shadow: inset 4px 0 0 #b9bcc2; }
+    tr.base td { background: #eef4fb; font-style: italic; color: #334155; }
+    #controls { margin: 2px 0 12px 0; }
+    #controls label { font-weight: 500; color: #374151; margin-right: 6px; font-size: 0.9rem; }
+    #viewnote { color: #6b7280; font-size: 0.85rem; margin-left: 12px; }
+    #controls select { padding: 6px 10px; border-radius: 8px; border: 1px solid #cfd7e3;
+                       font-size: 0.92rem; background: #f8fafc; color: #23272f; }
+    .team { font-weight: 650; font-size: 1.02rem; }
+    .run { color: #6b7280; font-size: 0.8rem; font-family: ui-monospace, Menlo, Consolas, monospace; }
+    .primary { font-weight: 700; font-size: 1.05rem; color: #145370; text-align: right; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; color: #374151; }
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+<main>
+  <section id="controls">
+    <label for="metric">Evaluation setting:</label><select id="metric"></select>
+    <span id="viewnote"></span>
+  </section>
+  <table class="lb"><thead><tr id="head"></tr></thead><tbody id="body"></tbody></table>
+  <p class="note">Best run per team for the selected evaluation setting, ranked by the highlighted metric. The TalentCLEF baseline is highlighted.
+     Teams whose runs could not be scored are listed at the bottom without a rank.</p>
+</main>
+<script>
+const VIEWS = [{"label": "Graded relevance", "rank": "NDCG_graded", "cols": ["MAP_graded", "MRR_graded", "P@5_graded", "P@10_graded"], "note": "Core skills count 2, contextual skills count 1."}, {"label": "Binary relevance", "rank": "NDCG_binary", "cols": ["MAP_binary", "MRR_binary", "P@5_binary", "P@10_binary"], "note": "All relevant skills count equally."}];
+let VIEW = VIEWS[0], PRIMARY = VIEW.rank, SECONDARY = VIEW.cols, ROWS = [];
+fetch("results_b.tsv").then(r => r.text()).then(text => {
+  ROWS = Papa.parse(text, {header: true, delimiter: "\t"}).data.filter(r => r.Team);
+  const sel = document.getElementById("metric");
+  VIEWS.forEach((v, i) => { const o = document.createElement("option");
+                            o.value = String(i); o.textContent = v.label; sel.appendChild(o); });
+  sel.value = "0";
+  sel.addEventListener("change", () => {
+    VIEW = VIEWS[parseInt(sel.value, 10)];
+    PRIMARY = VIEW.rank; SECONDARY = VIEW.cols;
+    build();
+  });
+  build();
+});
+function build() {
+  const rows = ROWS;
+  const skip = VIEW.exclude || [];
+  const eligible = r => r["ID errors"] !== "yes" && !skip.includes(r.Team)
+                        && !isNaN(parseFloat(r[PRIMARY]));
+  const best = {}, unscored = {};
+  rows.forEach(r => {
+    if (eligible(r)) {
+      if (!best[r.Team] || parseFloat(r[PRIMARY]) > parseFloat(best[r.Team][PRIMARY])) best[r.Team] = r;
+    } else if (!best[r.Team] && !skip.includes(r.Team)) {
+      unscored[r.Team] = r;
+    }
+  });
+  Object.keys(best).forEach(t => delete unscored[t]);
+  const list = Object.values(best);
+  const ranked = list.sort((a, b) => parseFloat(b[PRIMARY]) - parseFloat(a[PRIMARY]));
+  const others = Object.values(unscored);
+  document.getElementById("viewnote").textContent = VIEW.note || "";
+  document.getElementById("head").innerHTML =
+    "<th></th><th>Team</th><th style='text-align:right'>" + PRIMARY + "</th>" +
+    SECONDARY.map(c => "<th style='text-align:right'>" + c + "</th>").join("");
+  const fmt = v => (v === undefined || v === "" || isNaN(parseFloat(v))) ? "&ndash;" : parseFloat(v).toFixed(4);
+  const row = (r, pos) => {
+    const cls = r.Baseline === "yes" ? "base" : (pos && pos <= 2 ? "r" + pos : "");
+    const medal = pos ? pos : "&ndash;";
+    return "<tr class='" + cls + "'><td>" + medal + "</td>" +
+      "<td><span class='team'>" + r.Team + "</span><br><span class='run'>run " + r.run_ID + "</span></td>" +
+      "<td class='primary'>" + fmt(r[PRIMARY]) + "</td>" +
+      SECONDARY.map(c => "<td class='num'>" + fmt(r[c]) + "</td>").join("") + "</tr>";
+  };
+  document.getElementById("body").innerHTML =
+    ranked.map((r, i) => row(r, i + 1)).join("") + others.map(r => row(r, null)).join("");
+}
+</script>
+</body>
+</html>

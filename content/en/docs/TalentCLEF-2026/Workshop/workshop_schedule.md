@@ -7,7 +7,6 @@ type: docs
 ---
 
 {{< alert color="warning" title="Info." >}}
-This is a <strong>preliminary schedule</strong>. Times, talks and speakers are subject to change until the final CLEF 2026 programme is published.
 <strong>The presentations will not necessarily be given in the order shown below</strong>, so we kindly ask all participants to attend the full session in which their talk is scheduled.
 {{< /alert >}}
 
@@ -75,7 +74,7 @@ This is a <strong>preliminary schedule</strong>. Times, talks and speakers are s
       <td>Session 3</td>
       <td>
         <ul>
-          <li><strong>Keynote presentation</strong><br>
+          <li><strong>Keynote: Fair Play in the Talent Market: Open Challenges in AI for Work and Lessons from FairMatch</strong><br>
           <a href="/talentclef/docs/talentclef-2026/workshop/keynote/"><em>Toine Bogers</em></a></li>
           <li><strong>TalentCLEF 2027: Presentation of next year's tasks</strong><br>
           <em>Organizers</em></li>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+
+    body { font-family: Inter, Roboto, "Segoe UI", Arial, sans-serif; background: #fff; color: #252525; margin: 0; padding: 0 0 24px 0; }
+    main { max-width: 100%; margin: 0; padding: 0; }
+    .note { color: #6b7280; font-size: 0.86rem; margin: 6px 2px 14px 2px; }
+    .chip { display: inline-block; font-size: 0.74rem; font-weight: 600; line-height: 1.5;
+            border-radius: 5px; padding: 1px 6px; margin: 1px 3px 1px 0; border: 1px solid; white-space: nowrap; }
+    .c-repr { background:#e7f6e7; border-color:#4a9a4a; color:#245c24; }
+    .c-meth { background:#e4f6f9; border-color:#2e9fb5; color:#14596a; }
+    .c-det  { background:#fdefdf; border-color:#d98b28; color:#7d4b08; }
+    .c-llm  { background:#f3e8f8; border-color:#9a53b8; color:#5a2a70; }
+    .c-bias { background:#e7edfa; border-color:#3f63b5; color:#22386d; }
+    .c-ext  { background:#f4ece5; border-color:#a5754a; color:#5e4227; }
+    .c-mod  { background:#f3f4f6; border-color:#9ca3af; color:#374151; font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 500; }
+
+    #controls { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-bottom: 6px; }
+    #controls label { font-weight: 500; color: #374151; margin-right: 5px; font-size: 0.9rem; }
+    #controls select { padding: 7px 10px; border-radius: 8px; border: 1px solid #cfd7e3; font-size: 0.92rem;
+                       background: #f8fafc; color: #23272f; }
+    #controls button { padding: 7px 18px; border-radius: 9px; background: #145370; color: #fff; border: none;
+                       font-size: 0.92rem; font-weight: 600; cursor: pointer; }
+    #controls button:hover { background: #0d3a50; }
+    #plot { margin-top: 10px; border-radius: 10px; background: #f8fafc; padding: 6px; min-height: 420px; }
+</style>
+<script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+<body>
+<main>
+  <section id="controls">
+    <span><label for="xvar">X:</label><select id="xvar"></select></span>
+    <span><label for="yvar">Y:</label><select id="yvar"></select></span>
+    <span><label for="colorvar">Colour:</label><select id="colorvar"></select></span>
+    <button id="download">Download chart</button>
+  </section>
+  <p class="note">Pick a <strong>grouping</strong> on X to compare methodological choices (box plot, one point per run);
+     pick a <strong>metric</strong> on X to compare two metrics against each other (scatter). Hover a point for the
+     full system description.</p>
+  <div id="plot"></div>
+</main>
+<script>
+const TSV = "results_a.tsv";
+const METRICS = ["Avg.MAP(en,es)", "MAP(en-en)", "MRR(en-en)", "NDCG(en-en)", "P@5(en-en)", "P@10(en-en)", "P@100(en-en)", "MAP(es-es)", "MRR(es-es)", "NDCG(es-es)", "P@5(es-es)", "P@10(es-es)", "P@100(es-es)", "MAP(en-es)", "MRR(en-es)", "NDCG(en-es)", "P@5(en-es)", "P@10(en-es)", "P@100(en-es)", "MAP_male(es-es)", "MAP_female(es-es)", "MAP_neutral(es-es)", "MAP_gender(es-es)", "RBO(es-es)", "MAP_male(en-es)", "MAP_female(en-es)", "MAP_neutral(en-es)", "MAP_gender(en-es)", "RBO(en-es)", "RBO(en-en)", "Avg.RBO", "Models"];
+const FACETS = ["Team", "Pipeline", "Representation", "LLM strategy", "Fine-tuned",
+                "Uses external data", "Bias handling"];
+const DEFAULT_X = "Pipeline", DEFAULT_Y = "Avg.MAP(en,es)";
+const PALETTE = ["#145370","#D72660","#11A9A3","#F46036","#6B4FA1","#2978C7","#E0A800",
+                 "#3F8F4A","#B85C8A","#7A8B99","#C1553B","#4C6EF5","#12897B"];
+let rows = [];
+
+function num(r, c) { const v = parseFloat(r[c]); return isNaN(v) ? null : v; }
+function hover(r) {
+  const parts = ["<b>" + r.Team + "</b>", "run " + r.run_ID,
+    "Pipeline: " + r.Pipeline, "Representation: " + r.Representation,
+    "LLM: " + r["LLM strategy"], "Fine-tuned: " + r["Fine-tuned"]];
+  if (r["System details"]) parts.push("Details: " + r["System details"]);
+  return parts.join("<br>").replace(/;/g, ",");
+}
+function fill(sel, groups, def) {
+  const el = document.getElementById(sel);
+  el.innerHTML = "";
+  groups.forEach(([label, items]) => {
+    const g = document.createElement("optgroup"); g.label = label;
+    items.forEach(o => { const opt = document.createElement("option");
+                         opt.value = o; opt.textContent = o; g.appendChild(opt); });
+    el.appendChild(g);
+  });
+  if (def) el.value = def;
+}
+function draw() {
+  const x = document.getElementById("xvar").value;
+  const y = document.getElementById("yvar").value;
+  const c = document.getElementById("colorvar").value;
+  const data = rows.filter(r => num(r, y) !== null);
+  const groups = {};
+  data.forEach(r => {
+    const g = r[c] || "n/a";
+    (groups[g] = groups[g] || []).push(r);
+  });
+  const categorical = FACETS.includes(x);
+  let i = 0;
+  const traces = Object.entries(groups).map(([name, rs]) => {
+    const colour = PALETTE[i++ % PALETTE.length];
+    if (categorical) {
+      return { type: "box", name: name, legendgroup: name,
+               x: rs.map(r => r[x] || "n/a"), y: rs.map(r => num(r, y)),
+               text: rs.map(hover), hoverinfo: "text+y",
+               boxpoints: "all", jitter: 0.5, pointpos: 0, fillcolor: "rgba(0,0,0,0)",
+               line: { color: colour, width: 1.2 }, marker: { color: colour, size: 7, opacity: 0.85 } };
+    }
+    return { type: "scatter", mode: "markers", name: name, legendgroup: name,
+             x: rs.map(r => num(r, x)), y: rs.map(r => num(r, y)),
+             text: rs.map(hover), hoverinfo: "text+x+y",
+             marker: { color: colour, size: 11, opacity: 0.85,
+                       line: { color: "#fff", width: 1 } } };
+  });
+  if (categorical) {
+    // reference column with every run, so any group can be compared with the whole field
+    traces.push({ type: "box", name: "All runs",
+      x: data.map(() => "All runs"), y: data.map(r => num(r, y)),
+      text: data.map(hover), hoverinfo: "text+y",
+      boxpoints: "all", jitter: 0.5, pointpos: 0, fillcolor: "rgba(0,0,0,0)",
+      line: { color: "#6b7280", width: 1.2 },
+      marker: { color: "#6b7280", size: 7, opacity: 0.7 } });
+  }
+  Plotly.newPlot("plot", traces, {
+    boxmode: "group",
+    margin: { t: 30, r: 20, b: 90, l: 70 },
+    xaxis: { title: x, automargin: true },
+    yaxis: { title: y, automargin: true, zeroline: false },
+    legend: { orientation: "h", y: -0.22 },
+    plot_bgcolor: "#f8fafc", paper_bgcolor: "#f8fafc",
+    font: { family: "Inter, Roboto, Arial, sans-serif", color: "#252525" },
+    height: 560
+  }, { responsive: true, displaylogo: false });
+}
+fetch(TSV).then(r => r.text()).then(text => {
+  rows = Papa.parse(text, { header: true, delimiter: "\t" }).data.filter(r => r.Team);
+  fill("xvar", [["Group by", FACETS], ["Metric", METRICS]], DEFAULT_X);
+  fill("yvar", [["Metric", METRICS]], DEFAULT_Y);
+  fill("colorvar", [["Colour by", FACETS]], "Team");
+  ["xvar", "yvar", "colorvar"].forEach(id =>
+    document.getElementById(id).addEventListener("change", draw));
+  document.getElementById("download").addEventListener("click", () =>
+    Plotly.downloadImage("plot", { format: "png", filename: "talentclef2026_taskA" }));
+  draw();
+});
+</script>
+</body>
+</html>
