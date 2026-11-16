@@ -8,36 +8,26 @@ menu:
 
 
 {{< alert color="warning" title="Info." >}}
+<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2027 will be released on <strong>20th November 2026</strong>.
 
-<i class="fas fa-exclamation-triangle"></i>
-The programme of the <strong>TalentCLEF Workshop at CLEF 2026</strong> is now available: [**view the workshop schedule**](/talentclef/docs/talentclef-2026/workshop/workshop_schedule).
+Team registration will open soon. Stay tuned!
+ {{< /alert >}}
 
-The <strong>official results</strong> of Task A and Task B are published: [**Task A results**](/talentclef/docs/talentclef-2026/results/task_a_results), [**Task B results**](/talentclef/docs/talentclef-2026/results/task_b_results) and [**publications**](/talentclef/docs/talentclef-2026/results/publications/).
-
-We look forward to seeing you at [**CLEF 2026 in Jena**](https://clef2026.clef-initiative.eu/), 21-24 September 2026!
-
-{{< /alert >}}
-## TalentCLEF 2026 schedule 
+## TalentCLEF 2027 schedule
 
 | Status | Date                            | Event                                                       | Link |
 |--------|---------------------------------|-------------------------------------------------------------|------|
-|<div style="text-align: center; color: green;">&#10004;</div> | 17th November 2025               | Sample set  release                                    | [Link](https://doi.org/10.5281/zenodo.17625261) |
-|<div style="text-align: center; color: green;">&#10004;</div> |  17th November 2025              | Registration opens                                           | [Link](https://clef2026.clef-initiative.eu/) |
-|<div style="text-align: center; color: green;">&#10004;</div> | <s>26th January 2026</s> 2nd February 2026             | Development Data Release for Task A                    | [Link](https://doi.org/10.5281/zenodo.17625261) | |
-|<div style="text-align: center; color: green;">&#10004;</div> | 2nd February 2026              | Training Data Release for Task B     |[Link](https://doi.org/10.5281/zenodo.17625261) |  |
-|<div style="text-align: center; color: green;">&#10004;</div>| <s>16th February 2026</s> 24th February 2026                 | Development Data Release for Task B    | [Link](https://doi.org/10.5281/zenodo.17625261) | 
-|<div style="text-align: center; color: green;">&#10004;</div>| 2nd March 2026                 | Codabench Release for Task A   | [Link](https://www.codabench.org/competitions/14226/) | 
-|<div style="text-align: center; color: green;">&#10004;</div>| 9th March 2026                 | Codabench Release for Task B   | [Link](https://www.codabench.org/competitions/14489/) | 
-|<div style="text-align: center; color: green;">&#10004;</div>| 20th April 2026                 | Evaluation Data Release for Task A and B   | [Link](https://doi.org/10.5281/zenodo.17625261) | 
-| <div style="text-align: center; color: green;">&#10004;</div>    | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task A             | [Link](https://www.codabench.org/competitions/14226/)  | 
-|  <div style="text-align: center; color: green;">&#10004;</div>      | <s>13th April</s> 20th April - 3rd May 2026       | Evaluation period of Task B             | [Link](https://www.codabench.org/competitions/14489/) | 
-|<div style="text-align: center; color: green;">&#10004;</div>| 11th May 2026                    | Send Task A and B Results to participants                           |  | 
-|<div style="text-align: center; color: green;">&#10004;</div>| 28th May 2026             | Submission of CLEF 2026 Working Notes             |  | 
-|<div style="text-align: center; color: green;">&#10004;</div>| June - July 2026       | Review of Labs Overviews                         |   | 
-|        | 21-24 September 2026       | CLEF 2026 - Jena                         | [Link](https://clef2026.clef-initiative.eu/)  | 
-
-
-
+|<div style="text-align: center; color: green;">&#10004;</div> | 18th September 2026 | Website release |  |
+|        | 20th November 2026              | Sample set release                                           |  |
+|        | November 2026                   | Registration opens                                           |  |
+|        | 20th January 2027               | Training data available for Task 2                           |  |
+|        | 16th February 2027              | Start of Task 1.1 with the release of the development data   |  |
+|        | 16th March 2027                 | Start of Task 1.2 with the release of the development data   |  |
+|        | 16th March 2027                 | Start of Task 2 with the release of the development data     |  |
+|        | 20th April 2027                 | Test set release                                             |  |
+|        | 20th April - 17th May 2027      | Evaluation period of Tasks 1 and 2                           |  |
+|        | 18th May 2027                   | Publication of Official Results                              |  |
+|        | June 2027                       | Submission of CLEF 2027 Working Notes (Tentative)            |  |
+|        | June - July 2027                | Review of Labs Overviews (Tentative)                         |  |
 
 {.td-table  .my-dark-table-style}
-
