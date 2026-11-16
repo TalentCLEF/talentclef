@@ -60,8 +60,8 @@ resources:
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
-          footer="**Paula Estrella** <br> Avature, Spain">}}
-          <img src="paula_estrella.jpg" alt="Paula Estrella" class="full-width-image">
+          footer="**Paula Estrella, PhD.** <br> Avature, Spain">}}
+          <img src="paula_estrella.jpg" alt="Paula Estrella, PhD." class="full-width-image">
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
