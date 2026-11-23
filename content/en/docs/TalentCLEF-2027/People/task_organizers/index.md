@@ -25,15 +25,11 @@ resources:
 }
 
 /* Panes with fewer than five cards are narrowed so every card keeps
-   roughly the same width as the five cards in the first Task 1 row. */
-.task1-row2 {
-  max-width: 80%;
-}
+   roughly the same width as the five cards in each Task 1 row. */
 .task2-pane {
   max-width: 60%;
 }
 @media (max-width: 768px) {
-  .task1-row2,
   .task2-pane {
     max-width: 100%;
   }
@@ -71,8 +67,6 @@ resources:
 
 {{< /cardpane >}}
 
-<div class="task1-row2">
-
 {{< cardpane >}}
 
 {{< card header="" title="" subtitle=""
@@ -86,6 +80,11 @@ resources:
 {{< /card >}}
 
 {{< card header="" title="" subtitle=""
+          footer="**Arij Riabi** <br> Devoteam">}}
+          <img src="arij_riabi.png" alt="Arij Riabi" class="full-width-image">
+{{< /card >}}
+
+{{< card header="" title="" subtitle=""
           footer="**Álvaro Rodrigo, PhD.** <br> UNED, Spain">}}
           <img src="alvaro_rodrigo.png" alt="Álvaro Rodrigo, PhD." class="full-width-image">
 {{< /card >}}
@@ -96,8 +95,6 @@ resources:
 {{< /card >}}
 
 {{< /cardpane >}}
-
-</div>
 
 
 ## Task 2
