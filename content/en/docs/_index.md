@@ -8,7 +8,7 @@ menu:
 
 
 {{< alert color="warning" title="Info." >}}
-<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2027 will be released on <strong>20th November 2026</strong>.
+<i class="fas fa-exclamation-triangle"></i> The sample set for <strong>Talent</strong>CLEF 2027 has been released! You can download it from [here](https://doi.org/10.5281/zenodo.24461181).
 
 Team registration will open soon. Stay tuned!
  {{< /alert >}}
@@ -18,7 +18,7 @@ Team registration will open soon. Stay tuned!
 | Status | Date                            | Event                                                       | Link |
 |--------|---------------------------------|-------------------------------------------------------------|------|
 |<div style="text-align: center; color: green;">&#10004;</div> | 18th September 2026 | Website release |  |
-|        | 20th November 2026              | Sample set release                                           |  |
+|<div style="text-align: center; color: green;">&#10004;</div> | 20th November 2026              | Sample set release                                           | [Link](https://doi.org/10.5281/zenodo.24461181) |
 |        | November 2026                   | Registration opens                                           |  |
 |        | 20th January 2027               | Training data available for Task 2                           |  |
 |        | 16th February 2027              | Start of Task 1.1 with the release of the development data   |  |
